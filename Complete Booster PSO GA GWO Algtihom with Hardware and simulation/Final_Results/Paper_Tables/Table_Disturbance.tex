@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering\caption{Disturbance rejection (peak deviation in percent of Vref).}\label{tab:dist}
+\begin{tabular}{lrrrrrr}
+\toprule
+Design & LinePeak\_nom\_pct & LinePeak\_worst\_pct & LineRecov\_worst\_ms & LoadPeak\_nom\_pct & LoadPeak\_worst\_pct & LoadRecov\_worst\_ms \\
+\midrule
+pidtune wc=100 & 24.1 & 25.91 & 27.66 & 0.09219 & 0.261 & 0 \\
+pidtune wc=150 & 23.95 & 25.81 & 18.44 & 0.09214 & 0.2609 & 0 \\
+pidtune wc=300 & 23.49 & 25.61 & 9.218 & 0.09198 & 0.2605 & 0 \\
+Auto (app) & 19.67 & 24.08 & 4.208 & 0.09064 & 0.2693 & 0 \\
+Slider (app) & 21.53 & 24.43 & 5.812 & 0.09029 & 0.2568 & 0 \\
+PSO & 15.25 & 18.67 & 2.405 & 0.08113 & 0.2368 & 0 \\
+GA & 15.25 & 18.67 & 2.405 & 0.08113 & 0.2368 & 0 \\
+GWO & 15.26 & 18.69 & 2.405 & 0.08118 & 0.2369 & 0 \\
+NSGA-II knee & 14.61 & 17.61 & 2.605 & 0.07914 & 0.2323 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}

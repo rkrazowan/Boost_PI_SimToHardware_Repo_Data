@@ -1,0 +1,90 @@
+clear; clc; close all;
+
+%% ===== 1. SET YOUR VALUES HERE =====
+Vref    = ;      % target voltage (V), allowed 5 to 18
+Kp      = 0.1;     % proportional gain, allowed 0 to 5
+Ki      = 20;      % integral gain, allowed 0 to 500
+runTime = 10;      % how many seconds to record
+
+%% ===== 2. CONNECT =====
+s = serialport("COM10", 115200);
+configureTerminator(s, "LF");
+s.Timeout = 2;
+pause(2.5);                  % wait for Arduino restart
+flush(s);
+
+%% ===== 3. SEND THE VALUES =====
+sendCmd(s, "RESET");
+sendCmd(s, sprintf("KP=%.4f", Kp));
+sendCmd(s, sprintf("KI=%.4f", Ki));
+sendCmd(s, sprintf("VREF=%.2f", Vref));
+flush(s);
+
+%% ===== 4. READ AND PRINT THE RESULTS =====
+fprintf("\n Time(s)  Target(V)  Vout(V)  Duty(%%)  PWM\n");
+fprintf("------------------------------------------------\n");
+
+data = [];
+t0 = tic;
+while toc(t0) < runTime
+    line = readline(s);
+    if isempty(line) || ismissing(line), continue; end
+    p = split(strtrim(line), ",");
+    if numel(p) ~= 6 || p(1) ~= "DATA", continue; end
+    v = str2double(p(2:6))';
+    if any(isnan(v)), continue; end
+
+    data = [data; toc(t0), v(2), v(3), v(4), v(5)]; %#ok<AGROW>
+    fprintf("%7.2f   %7.2f   %7.3f   %6.1f   %3d\n", ...
+            data(end,1), data(end,2), data(end,3), data(end,4), data(end,5));
+
+    if v(3) > 20                 % safety stop
+        sendCmd(s, "VREF=5"); sendCmd(s, "RESET");
+        warning("Vout went above 20 V. Stopped for safety.");
+        break;
+    end
+end
+
+%% ===== 5. TURN OFF AND CLOSE =====
+sendCmd(s, "VREF=5");
+clear s;
+
+%% ===== 6. SUMMARY IN THE COMMAND WINDOW =====
+Time = data(:,1);  Target = data(:,2);  Vout = data(:,3);
+Duty = data(:,4);  PWM = data(:,5);
+
+finalVout = mean(Vout(max(1,end-10):end));
+overshoot = max(0, (max(Vout) - Vref) / Vref * 100);
+fprintf("\n========== SUMMARY ==========\n");
+fprintf("Kp = %.3f, Ki = %.1f, Vref = %.2f V\n", Kp, Ki, Vref);
+fprintf("Final Vout  = %.3f V\n", finalVout);
+fprintf("Final error = %.3f V\n", finalVout - Vref);
+fprintf("Peak Vout   = %.3f V\n", max(Vout));
+fprintf("Overshoot   = %.2f %%\n", overshoot);
+fprintf("Final duty  = %.1f %%\n", mean(Duty(max(1,end-10):end)));
+
+%% ===== 7. PLOT =====
+figure;
+subplot(2,1,1);
+plot(Time, Target, "--", Time, Vout, "LineWidth", 1.5); grid on;
+legend("Target","Vout"); ylabel("Voltage (V)");
+title(sprintf("Kp=%.3f  Ki=%.1f  Vref=%.1f V", Kp, Ki, Vref));
+subplot(2,1,2);
+plot(Time, Duty, "LineWidth", 1.5); grid on;
+xlabel("Time (s)"); ylabel("Duty (%)");
+
+%% ===== FUNCTION (keep at the bottom) =====
+function ok = sendCmd(s, cmd)
+    ok = false;
+    flush(s);
+    writeline(s, cmd);
+    t0 = tic;
+    while toc(t0) < 1
+        line = readline(s);
+        if isempty(line) || ismissing(line), continue; end
+        line = strtrim(line);
+        if startsWith(line, "ACK"), ok = true; return; end
+        if startsWith(line, "ERROR"), warning("Arduino: " + line); return; end
+    end
+    warning("No reply to " + cmd);
+end

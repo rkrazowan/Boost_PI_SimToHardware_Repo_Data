@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering\caption{Switching-model (Simulink) validation.}\label{tab:sim}
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+Design & Kp & Ki & WorstOS\_pct & WorstTs\_ms & WorstTr\_ms & WorstIAE\_ms & WorstSteadyErr\_V & MaxDuty & J\_sim \\
+\midrule
+pidtune wc=100 & 0 & 3.044 & 8.877 & 92.74 & 30.74 & 12.03 & 0.1364 & 0.6218 & 2.162 \\
+pidtune wc=150 & 0 & 4.565 & 11.54 & 85.68 & 20.18 & 10.06 & 0.1794 & 0.6218 & 2.17 \\
+pidtune wc=300 & 0 & 9.117 & 15.6 & 90.32 & 10.76 & 7.917 & 0.1385 & 0.6218 & 2.584 \\
+Auto (app) & 0 & 48.06 & 11.29 & 56.24 & 2.32 & 3.251 & 0.01348 & 0.6487 & 1.95 \\
+Slider (app) & 0.00243 & 15.31 & 14.25 & 70.54 & 6.78 & 5.647 & 0.05867 & 0.6218 & 2.156 \\
+PSO & 0.01622 & 45.02 & 14.29 & 38.72 & 2.64 & 2.162 & 0.001122 & 0.6217 & 1.516 \\
+GA & 0.01622 & 45.02 & 14.29 & 38.72 & 2.64 & 2.162 & 0.001135 & 0.6217 & 1.516 \\
+GWO & 0.01614 & 44.96 & 14.22 & 38.8 & 2.64 & 2.169 & 0.001134 & 0.6217 & 1.51 \\
+NSGA-II knee & 0.01963 & 46.36 & 17.19 & 30.16 & 2.84 & 2.006 & 0.0009407 & 0.6217 & 1.716 \\
+\bottomrule
+\end{tabular}
+\end{table}

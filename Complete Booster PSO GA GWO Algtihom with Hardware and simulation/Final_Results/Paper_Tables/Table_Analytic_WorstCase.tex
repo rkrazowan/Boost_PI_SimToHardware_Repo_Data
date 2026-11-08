@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering\caption{Worst-case performance over the corner scenarios (averaged model).}\label{tab:analytic}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Design & Kp & Ki & WorstOS\_pct & WorstTs\_ms & WorstTr\_ms & WorstIAE\_ms & MinPM\_deg & J\_worstcase \\
+\midrule
+pidtune wc=100 & 0 & 3.044 & 0 & 46.89 & 26.25 & 12.03 & 87.9 & 0.9676 \\
+pidtune wc=150 & 0 & 4.565 & 0 & 31.26 & 17.43 & 8.024 & 86.84 & 0.6449 \\
+pidtune wc=300 & 0 & 9.117 & 4.441e-14 & 15.63 & 8.617 & 4.018 & 83.64 & 0.3223 \\
+Auto (app) & 0 & 48.06 & 29.99 & 5.812 & 1.403 & 1.069 & 43.64 & 2.94 \\
+Slider (app) & 0.00243 & 15.31 & 8.882e-14 & 9.619 & 5.21 & 2.392 & 84.79 & 0.1957 \\
+PSO & 0.01622 & 45.02 & 0.3181 & 4.008 & 2.204 & 0.8137 & 64.9 & 0.07566 \\
+GA & 0.01622 & 45.02 & 0.3177 & 4.008 & 2.204 & 0.8137 & 64.9 & 0.07566 \\
+GWO & 0.01614 & 44.96 & 0.3104 & 4.008 & 2.204 & 0.8148 & 65.24 & 0.07569 \\
+NSGA-II knee & 0.01963 & 46.36 & 2.22e-14 & 4.208 & 2.204 & 0.7903 & 55.5 & 0.07684 \\
+\bottomrule
+\end{tabular}
+\end{table}

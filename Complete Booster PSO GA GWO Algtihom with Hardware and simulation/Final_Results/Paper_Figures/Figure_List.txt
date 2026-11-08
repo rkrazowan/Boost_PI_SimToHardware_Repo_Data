@@ -1,0 +1,36 @@
+Fig1_Convergence  (.pdf / .png / .fig)
+    Convergence of the mean worst-case cost J (shaded: +/-1 std over independent runs) for PSO, GA, GWO and NSGA-II knee.
+
+Fig2_Statistics  (.pdf / .png / .fig)
+    (a) Distribution of the final cost J over independent runs. (b) Wilcoxon rank-sum p-values between algorithms.
+
+Fig3_KpKi_Plane  (.pdf / .png / .fig)
+    Optimised (Kp, Ki) of every run in the parameter plane, with the reference designs (pidtune and PID Tuner app).
+
+Fig4_Pareto_Knee  (.pdf / .png / .fig)
+    NSGA-II: (a) Pareto front of IAE, settling time and overshoot, (b) projection with the knee point, (c) hypervolume over runs.
+
+Fig5_Step_Analytic  (.pdf / .png / .fig)
+    Closed-loop step responses of all designs (averaged model): (a) nominal case, (b) most severe corner scenario.
+
+Fig6_Robustness_Family  (.pdf / .png / .fig)
+    Step responses of the four optimised designs over all corner scenarios (grey) and the nominal case (colour).
+
+Fig7_MonteCarlo  (.pdf / .png / .fig)
+    Monte Carlo robustness on held-out random scenarios: (a) overshoot CDF, (b) settling-time CDF, (c) success rate against the specification.
+
+Fig8_Disturbance  (.pdf / .png / .fig)
+    Disturbance rejection (nominal): (a) -20% input-voltage step, (b) +20% load-current step, peak deviation in percent of Vref.
+
+Fig9_Metric_Summary  (.pdf / .png / .fig)
+    Worst-case overshoot, worst-case settling time, minimum phase margin and Monte Carlo success rate for all designs.
+
+Fig10_Simulink_Validation  (.pdf / .png / .fig)
+    Switching-model (Simulink) validation: output voltage and duty cycle for the nominal case and the worst corner.
+
+Fig11_Simulink_Metrics  (.pdf / .png / .fig)
+    Simulink worst-case overshoot, worst-case settling time and worst-case cost J for all designs.
+
+Fig12_Model_Mismatch  (.pdf / .png / .fig)
+    Averaged (analytic) model versus the Simulink switching model, nominal case, for every design.
+

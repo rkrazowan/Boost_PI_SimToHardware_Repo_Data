@@ -1,0 +1,30 @@
+Fig1_Convergence  (.pdf / .png / .fig)
+    Convergence of the mean measured worst-case cost J (shaded: +/-1 std over independent hardware runs).
+
+Fig2_Statistics  (.pdf / .png / .fig)
+    (a) Distribution of the re-evaluated cost over runs. (b) Wilcoxon rank-sum p-values between algorithms.
+
+Fig3_KpKi_Plane  (.pdf / .png / .fig)
+    Best (Kp, Ki) of every run, hardware references, and the recommended design.
+
+Fig4_Pareto_Knee  (.pdf / .png / .fig)
+    NSGA-II: (a) Pareto front of IAE, settling time and overshoot, (b) projection with knee, (c) hypervolume over runs.
+
+Fig5_Cost_Landscape  (.pdf / .png / .fig)
+    Measured cost of every hardware evaluation in the (Kp, Ki) plane.
+
+Fig6_Hardware_Steps  (.pdf / .png / .fig)
+    Measured output-voltage step responses of all designs (mean of repeats) for the up- and down-steps.
+
+Fig7_Repeatability  (.pdf / .png / .fig)
+    Repeatability of the four optimised designs: individual repeats (grey) and mean (colour).
+
+Fig8_Duty  (.pdf / .png / .fig)
+    Measured duty cycle during the first two steps (control effort).
+
+Fig9_Metric_Summary  (.pdf / .png / .fig)
+    Worst-case overshoot, settling time, steady-state error and duty noise (mean +/- std over repeats).
+
+Fig10_Validation_Cost  (.pdf / .png / .fig)
+    Hardware validation cost J of every design over repeated measurements.
+

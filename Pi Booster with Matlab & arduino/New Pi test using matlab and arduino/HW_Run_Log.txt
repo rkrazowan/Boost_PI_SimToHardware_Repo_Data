@@ -1,0 +1,99 @@
+--- Sanity test with the baseline gains (Kp=0.1, Ki=20) ---
+  test 1: J = 1.871 | OS = [1.96 3.98] % | Ts = [91 753] ms | ess = [0.76 0.47] % | 2.39 s
+  test 2: J = 4.296 | OS = [1.31 8.4] % | Ts = [81 763] ms | ess = [0.29 3.84] % | 2.40 s
+  test 3: J = 1.953 | OS = [2.38 5.05] % | Ts = [90 753] ms | ess = [0.57 0.02] % | 2.40 s
+1 hardware evaluation = 2.40 s | PLAN: pop = 6, iterations = 59, runs = 3 per algorithm (360 evaluations/run)
+Expected: optimisation 173.6 min + re-evaluation 1.0 min + validation 1.3 min + fixed ~4 min = 180 min (budget 180)
+Search range: Kp = [0 0.5], Ki = [2 200] (Ki log scale)
+PSO           run  1/3 | J = 0.6792 | Kp = 0.08097 | Ki = 14.758 | 14.3 min | elapsed 14.5 min
+PSO           run  2/3 | J = 0.8133 | Kp = 0.38951 | Ki = 25.992 | 14.3 min | elapsed 28.8 min
+PSO           run  3/3 | J = 0.4360 | Kp = 0.04737 | Ki = 104.675 | 14.3 min | elapsed 43.2 min
+GA            run  1/3 | J = 0.4675 | Kp = 0.06598 | Ki = 108.657 | 14.3 min | elapsed 57.6 min
+GA            run  2/3 | J = 0.9439 | Kp = 0.18957 | Ki = 8.551 | 14.3 min | elapsed 71.9 min
+GA            run  3/3 | J = 0.4637 | Kp = 0.06013 | Ki = 48.239 | 14.3 min | elapsed 86.3 min
+GWO           run  1/3 | J = 0.4639 | Kp = 0.09096 | Ki = 101.609 | 14.3 min | elapsed 100.7 min
+GWO           run  2/3 | J = 0.5031 | Kp = 0.00955 | Ki = 60.578 | 14.3 min | elapsed 115.0 min
+GWO           run  3/3 | J = 0.4593 | Kp = 0.07289 | Ki = 75.366 | 14.3 min | elapsed 129.4 min
+NSGA-II knee  run  1/3 | J = 1.8174 | Kp = 0.24308 | Ki = 118.957 | 14.3 min | elapsed 143.8 min
+NSGA-II knee  run  2/3 | J = 1.3564 | Kp = 0.00000 | Ki = 5.315 | 14.3 min | elapsed 158.1 min
+NSGA-II knee  run  3/3 | J = 1.1258 | Kp = 0.25775 | Ki = 8.672 | 14.3 min | elapsed 172.5 min
+
+--- Re-evaluating each run's best design (2 repeats each) ---
+PSO           re-evaluated | best Jre = 0.7641 | elapsed 172.8 min
+GA            re-evaluated | best Jre = 0.5963 | elapsed 173.1 min
+GWO           re-evaluated | best Jre = 0.6835 | elapsed 173.3 min
+NSGA-II knee  re-evaluated | best Jre = 1.2825 | elapsed 173.5 min
+
+--- Optimiser statistics (3 runs, hardware re-evaluated cost J) ---
+      <strong>Algorithm</strong>       <strong>J_best</strong>     <strong>J_median</strong>    <strong>J_mean</strong>      <strong>J_std</strong>     <strong>J_worst</strong>    <strong>Time_min_per_run</strong>    <strong>Kp_best</strong>     <strong>Ki_best</strong>
+    <strong>______________</strong>    <strong>_______</strong>    <strong>________</strong>    <strong>_______</strong>    <strong>_______</strong>    <strong>_______</strong>    <strong>________________</strong>    <strong>________</strong>    <strong>_______</strong>
+
+    "PSO"              0.7641     1.2808      1.6818     1.1708    3.0004          14.277         0.047372    104.67 
+    "GA"              0.59626     1.1491     0.99494    0.34822    1.2395          14.277         0.060129    48.239 
+    "GWO"             0.68345     1.1218      1.2273    0.60363    1.8768          14.275         0.072888    75.366 
+    "NSGA-II knee"     1.2825     1.6887      1.5572    0.23803    1.7005          14.275                0    5.3147 
+
+NSGA-II hypervolume: mean 0.5749, std 0.0923
+                      <strong>PSO</strong>         <strong>GA</strong>         <strong>GWO</strong>      <strong>NSGA_II knee</strong>
+                    <strong>_______</strong>    <strong>________</strong>    <strong>_______</strong>    <strong>____________</strong>
+
+    <strong>PSO         </strong>        NaN     0.27523    0.51269       0.51269  
+    <strong>GA          </strong>    0.27523         NaN    0.82726      0.049535  
+    <strong>GWO         </strong>    0.51269     0.82726        NaN       0.51269  
+    <strong>NSGA_II knee</strong>    0.51269    0.049535    0.51269           NaN  
+
+
+--- Final validation: 6 designs x 3 repeats, steps [8 12 15 12 8] ---
+  validation repeat 1/3 done | elapsed 173.9 min
+  validation repeat 2/3 done | elapsed 174.3 min
+  validation repeat 3/3 done | elapsed 174.7 min
+
+--- Hardware validation (worst over the 4 steps, mean of 3 single repeats) ---
+           <strong>Design</strong>              <strong>Kp</strong>         <strong>Ki</strong>      <strong>WorstOS_pct</strong>     <strong>OS_sd</strong>     <strong>WorstTs_ms</strong>    <strong>Ts_sd</strong>     <strong>WorstTr_ms</strong>    <strong>WorstSSerr_pct</strong>    <strong>Ripple_pct</strong>    <strong>DutyStd_pct</strong>    <strong>J_mean</strong>       <strong>J_sd</strong>  
+    <strong>____________________</strong>    <strong>________</strong>    <strong>______</strong>    <strong>___________</strong>    <strong>_______</strong>    <strong>__________</strong>    <strong>______</strong>    <strong>__________</strong>    <strong>______________</strong>    <strong>__________</strong>    <strong>___________</strong>    <strong>_______</strong>    <strong>________</strong>
+
+    "Baseline (0.1, 20)"         0.1        20      6.8924       0.33009      743.33      26.274       72.04          2.8254          1.6398        0.20266       2.8732     0.30374
+    "Ref (0.05, 10)"            0.05        10      4.4265        1.2218      726.33      35.119      129.97          1.1248            3.13          0.197       1.8855    0.062594
+    "PSO"                   0.047372    104.67      8.5196        5.6219      278.33      428.39      16.242          1.4879          1.9895        0.28563       1.2509     0.43888
+    "GA"                    0.060129    48.239      5.1084        1.4458      284.33      414.57       22.84          1.0188          2.0421        0.20096      0.88299     0.54942
+    "GWO"                   0.072888    75.366      6.7062        1.3695      702.67       86.95      17.085          1.0789          2.2269        0.24744        1.712     0.31929
+    "NSGA-II knee"                 0    5.3147       4.809        1.5277         472       62.45      224.71         0.85578          2.2967        0.20843       1.5374      0.1204
+
+
+--- Ensemble-averaged metrics (worst over the steps) ---
+           <strong>Design</strong>              <strong>Kp</strong>         <strong>Ki</strong>      <strong>OS_pct_ens</strong>    <strong>Ts_ms_ens</strong>    <strong>Tr_ms_ens</strong>    <strong>SSerr_pct_ens</strong>
+    <strong>____________________</strong>    <strong>________</strong>    <strong>______</strong>    <strong>__________</strong>    <strong>_________</strong>    <strong>_________</strong>    <strong>_____________</strong>
+
+    "Baseline (0.1, 20)"         0.1        20      6.2913         780        72.097          2.8305   
+    "Ref (0.05, 10)"            0.05        10      1.9869         770        128.74         0.49771   
+    "PSO"                   0.047372    104.67      7.1549         770        9.9611           1.016   
+    "GA"                    0.060129    48.239      4.0909         770            20         0.43783   
+    "GWO"                   0.072888    75.366      3.4083         580        11.051          0.8536   
+    "NSGA-II knee"                 0    5.3147      2.6605         430        228.41         0.61241   
+
+
+--- Final ranking (hardware validation cost) ---
+    <strong>Rank</strong>           <strong>Design</strong>              <strong>Kp</strong>         <strong>Ki</strong>      <strong>J_mean</strong>       <strong>J_sd</strong>  
+    <strong>____</strong>    <strong>____________________</strong>    <strong>________</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>________</strong>
+
+     1      "GA"                    0.060129    48.239    0.88299     0.54942
+     2      "PSO"                   0.047372    104.67     1.2509     0.43888
+     3      "NSGA-II knee"                 0    5.3147     1.5374      0.1204
+     4      "GWO"                   0.072888    75.366      1.712     0.31929
+     5      "Ref (0.05, 10)"            0.05        10     1.8855    0.062594
+     6      "Baseline (0.1, 20)"         0.1        20     2.8732     0.30374
+
+>>> RECOMMENDED: GA  ->  Kp = 0.06013,  Ki = 48.2392
+
+--- Recommended design, step by step (ensemble average) ---
+       <strong>Step</strong>       <strong>OS_pct</strong>     <strong>Ts_ms</strong>    <strong>Tr_ms</strong>     <strong>SSerr_pct</strong>    <strong>Ripple_pct</strong>    <strong>DutyStd_pct</strong>
+    <strong>__________</strong>    <strong>_______</strong>    <strong>_____</strong>    <strong>______</strong>    <strong>_________</strong>    <strong>__________</strong>    <strong>___________</strong>
+
+    "8->12 V"      1.2194      35     19.018      0.1197      0.69282       0.044102  
+    "12->15 V"     4.0909     190     10.527     0.43783       1.4712        0.09869  
+    "15->12 V"     1.8591     770     11.574     0.22803      0.93311       0.073865  
+    "12->8 V"     0.88215      45         20     0.14284      0.40792       0.079415  
+
+
+Total time: 175.4 min. Figures: HW_Figures/, tables: HW_Tables/
+Recommended: Kp = 0.06013, Ki = 48.2392  (GA)

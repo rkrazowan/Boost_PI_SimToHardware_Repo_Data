@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering\caption{Hardware optimisation setup.}\label{tab:hwsetup}
+\begin{tabular}{lr}
+\toprule
+Item & Value \\
+\midrule
+Controller & discrete PI, 1 kHz, Arduino \\
+PI search range Kp & [0, 0.5] \\
+PI search range Ki & [2, 200] (log) \\
+Optimisation steps (V) & [8 12 15] \\
+Validation steps (V) & [8 12 15 12 8] \\
+Population / iterations / runs & 6 / 59 / 3 \\
+Re-evaluations / validation repeats & 2 / 3 \\
+Cost function & max+0.2 mean of weighted IAE, Ts, OS (+penalties) \\
+\bottomrule
+\end{tabular}
+\end{table}

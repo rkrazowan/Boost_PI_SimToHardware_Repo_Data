@@ -1,0 +1,90 @@
+--- Sanity test with the baseline gains (Kp=0.1, Ki=20) ---
+  test 1: J = 2.393 | OS = [2.73 5.8] % | Ts = [90 773] ms | ess = [0.72 0.55] % | 2.43 s
+  test 2: J = 2.397 | OS = [2.37 7.77] % | Ts = [753 773] ms | ess = [0.35 1.41] % | 2.37 s
+  test 3: J = 4.187 | OS = [2.51 10.38] % | Ts = [462 772] ms | ess = [0.27 3.45] % | 2.39 s
+
+--- Measuring 8 designs x 5 repeats (about 3.0 min) ---
+rep 1  Sim pidtune300 scaled  J =  4.892 | OS  10.6 % | Tr   22.1 ms | ess 4.44 %
+rep 1  HW GA (control)        J =  0.774 | OS   6.3 % | Tr   21.3 ms | ess 0.92 %
+rep 1  Sim-GWO scaled         J =  2.143 | OS  22.0 % | Tr   14.0 ms | ess 1.30 %
+rep 1  Sim NSGA-II scaled     J =  2.348 | OS  20.3 % | Tr   14.3 ms | ess 1.95 %
+rep 1  Sim-GWO, Ki/3          J =  2.353 | OS   9.7 % | Tr   18.4 ms | ess 3.02 %
+rep 1  Baseline (control)     J =  3.725 | OS  10.4 % | Tr   53.6 ms | ess 3.16 %
+rep 1  Sim slider scaled      J =  1.468 | OS   9.0 % | Tr   15.5 ms | ess 1.21 %
+rep 1  Sim-GWO, Ki/6          J =  2.565 | OS   6.5 % | Tr   22.7 ms | ess 1.47 %
+rep 2  HW GA (control)        J =  1.231 | OS   5.7 % | Tr   20.4 ms | ess 0.53 %
+rep 2  Sim-GWO, Ki/3          J =  4.368 | OS  12.0 % | Tr   18.3 ms | ess 3.79 %
+rep 2  Sim slider scaled      J =  1.741 | OS  15.2 % | Tr   16.3 ms | ess 1.34 %
+rep 2  Sim pidtune300 scaled  J =  2.127 | OS   6.2 % | Tr   19.3 ms | ess 2.09 %
+rep 2  Baseline (control)     J =  3.026 | OS   9.8 % | Tr   53.2 ms | ess 2.58 %
+rep 2  Sim-GWO scaled         J =  4.860 | OS  42.1 % | Tr   15.8 ms | ess 4.20 %
+rep 2  Sim NSGA-II scaled     J =  3.561 | OS  11.1 % | Tr   13.4 ms | ess 0.91 %
+rep 2  Sim-GWO, Ki/6          J =  2.327 | OS   6.3 % | Tr   30.1 ms | ess 1.34 %
+rep 3  Sim-GWO, Ki/3          J =  4.137 | OS  10.8 % | Tr   16.8 ms | ess 3.57 %
+rep 3  Sim-GWO, Ki/6          J =  5.513 | OS  11.5 % | Tr   28.5 ms | ess 4.76 %
+rep 3  HW GA (control)        J =  1.686 | OS   5.6 % | Tr   23.2 ms | ess 0.95 %
+rep 3  Sim NSGA-II scaled     J =  2.316 | OS   8.9 % | Tr   24.0 ms | ess 1.42 %
+rep 3  Sim-GWO scaled         J =  3.034 | OS  32.5 % | Tr   20.0 ms | ess 2.50 %
+rep 3  Baseline (control)     J =  6.020 | OS  12.4 % | Tr   49.6 ms | ess 5.19 %
+rep 3  Sim slider scaled      J =  1.644 | OS   8.1 % | Tr    6.6 ms | ess 1.38 %
+rep 3  Sim pidtune300 scaled  J =  1.979 | OS   5.4 % | Tr   18.2 ms | ess 1.47 %
+rep 4  Sim pidtune300 scaled  J =  2.126 | OS   7.6 % | Tr   18.2 ms | ess 1.79 %
+rep 4  Sim slider scaled      J =  2.716 | OS  12.5 % | Tr   15.7 ms | ess 3.25 %
+rep 4  Sim-GWO scaled         J =  4.644 | OS  38.0 % | Tr   13.5 ms | ess 0.95 %
+rep 4  Sim-GWO, Ki/3          J =  1.808 | OS   9.8 % | Tr   15.0 ms | ess 1.40 %
+rep 4  Sim-GWO, Ki/6          J =  2.593 | OS   8.0 % | Tr   19.9 ms | ess 1.00 %
+rep 4  Baseline (control)     J =  5.383 | OS  10.7 % | Tr   56.7 ms | ess 4.76 %
+rep 4  HW GA (control)        J =  1.468 | OS   5.6 % | Tr   25.9 ms | ess 1.48 %
+rep 4  Sim NSGA-II scaled     J =  3.312 | OS  16.4 % | Tr    0.0 ms | ess 0.69 %
+rep 5  HW GA (control)        J =  0.635 | OS   4.9 % | Tr   19.1 ms | ess 0.98 %
+rep 5  Sim slider scaled      J =  1.597 | OS   6.9 % | Tr   18.2 ms | ess 0.96 %
+rep 5  Baseline (control)     J =  2.817 | OS   9.2 % | Tr   57.8 ms | ess 2.48 %
+rep 5  Sim NSGA-II scaled     J =  2.924 | OS   7.5 % | Tr   11.3 ms | ess 1.31 %
+rep 5  Sim-GWO, Ki/6          J =  2.136 | OS   6.5 % | Tr   24.8 ms | ess 1.47 %
+rep 5  Sim pidtune300 scaled  J =  3.278 | OS   8.6 % | Tr   18.8 ms | ess 3.01 %
+rep 5  Sim-GWO scaled         J =  4.592 | OS  13.3 % | Tr   17.7 ms | ess 3.85 %
+rep 5  Sim-GWO, Ki/3          J =  1.693 | OS   6.4 % | Tr   15.5 ms | ess 1.51 %
+
+===== RESULT TABLE (copy everything from here) =====
+             <strong>Design</strong>                 <strong>Kp</strong>         <strong>Ki</strong>      <strong>J_mean</strong>     <strong>J_sd</strong>      <strong>OS_mean</strong>     <strong>OS_sd</strong>     <strong>Tr_ms</strong>     <strong>Ts_ms</strong>    <strong>ess_pct</strong>    <strong>ripple_pct</strong>    <strong>n_failed</strong>
+    <strong>_________________________</strong>    <strong>________</strong>    <strong>______</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>_______</strong>    <strong>_______</strong>    <strong>______</strong>    <strong>_____</strong>    <strong>_______</strong>    <strong>__________</strong>    <strong>________</strong>
+
+    {'Sim-GWO scaled'       }     0.10058     280.2    3.8545     1.2021    29.586      11.835    16.204      584     2.5582      4.3217         0    
+    {'Sim NSGA-II scaled'   }     0.12236     288.9    2.8921    0.55971    12.834      5.3923    12.601      737     1.2562      5.5534         0    
+    {'Sim slider scaled'    }    0.015143    95.432    1.8332     0.5033    10.339      3.4369    14.438    748.8     1.6295      2.8397         0    
+    {'Sim pidtune300 scaled'}           0    56.811    2.8803     1.2404    7.6804      2.0762    19.312    764.6     2.5593      3.5803         0    
+    {'Sim-GWO, Ki/3'        }     0.10058    93.401    2.8719     1.2872    9.7492      2.1049    16.799    751.2      2.658      3.9881         0    
+    {'Sim-GWO, Ki/6'        }     0.10058      46.7    3.0268     1.4025    7.7641      2.1943    25.194    773.2     2.0089       4.537         0    
+    {'HW GA (control)'      }    0.060129    48.239    1.1587    0.44737    5.5886     0.50241    21.976    413.6    0.97328      3.4298         0    
+    {'Baseline (control)'   }         0.1        20    4.1944     1.4343    10.512      1.2215    54.196      767      3.636      3.0542         0    
+
+Sanity J of baseline before the test: 4.187
+DONE. Send me the table above, HW_Retest.csv, HW_Retest.mat and HW_Retest.png
+bdclose all
+Run_Sim_Delay_and_HWlike
+PI block used: Boost_HWlike_copy/PID Controller1
+
+=== PART A: continuous PI versus discrete PI (Ts = 1 ms), start-up to 18.18 V ===
+
+=== PART B: Vin = 7.2 V, levels [8 12 15 12 8], hold 0.25 s, discrete PI 1 ms ===
+Sim-GWO scaled       Kp_hw 0.1006 Ki_hw   280.2 | OS 98.08 %  Tr    7.6 ms  Ts  243.5 ms  ess 0.19 %  J 9.530   (41 s)
+Sim NSGA-II scaled   Kp_hw 0.1224 Ki_hw   288.9 | OS 74.04 %  Tr    7.6 ms  Ts  197.2 ms  ess 0.07 %  J 7.328   (39 s)
+Sim slider scaled    Kp_hw 0.0151 Ki_hw    95.4 | OS 59.79 %  Tr    8.1 ms  Ts   96.4 ms  ess 0.02 %  J 5.755   (43 s)
+Sim pidtune300       Kp_hw 0.0000 Ki_hw    56.8 | OS 43.50 %  Tr    9.1 ms  Ts   87.0 ms  ess 0.02 %  J 4.276   (45 s)
+Sim-GWO, Ki/3        Kp_hw 0.1006 Ki_hw    93.4 | OS 43.72 %  Tr    8.1 ms  Ts   63.0 ms  ess 0.02 %  J 4.198   (57 s)
+Sim-GWO, Ki/6        Kp_hw 0.1006 Ki_hw    46.7 | OS 19.71 %  Tr   11.4 ms  Ts   51.6 ms  ess 0.02 %  J 1.973   (39 s)
+HW GA (bench best)   Kp_hw 0.0601 Ki_hw    48.2 | OS 26.49 %  Tr   10.4 ms  Ts   55.5 ms  ess 0.02 %  J 2.627   (40 s)
+HW baseline          Kp_hw 0.1000 Ki_hw    20.0 | OS  1.17 %  Tr   29.2 ms  Ts   47.5 ms  ess 0.02 %  J 0.258   (42 s)
+            <strong>Design</strong>            <strong>A_OS_cont</strong>    <strong>A_Ts_cont_ms</strong>    <strong>A_OS_disc</strong>    <strong>A_Ts_disc_ms</strong>     <strong>B_OS</strong>     <strong>B_Tr_ms</strong>    <strong>B_Ts_ms</strong>     <strong>B_ess</strong>        <strong>B_J</strong>  
+    <strong>______________________</strong>    <strong>_________</strong>    <strong>____________</strong>    <strong>_________</strong>    <strong>____________</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>_______</strong>    <strong>________</strong>    <strong>_______</strong>
+
+    {'Sim-GWO scaled'    }       NaN           NaN            NaN           NaN         98.078      7.64     243.46      0.19433     9.5301
+    {'Sim NSGA-II scaled'}       NaN           NaN            NaN           NaN         74.039      7.62     197.16     0.069284     7.3282
+    {'Sim slider scaled' }       NaN           NaN            NaN           NaN         59.794      8.06       96.4     0.017239     5.7551
+    {'Sim pidtune300'    }       NaN           NaN            NaN           NaN         43.503      9.06      87.04     0.018747     4.2762
+    {'Sim-GWO, Ki/3'     }       NaN           NaN            NaN           NaN         43.724      8.12      63.04     0.019052     4.1982
+    {'Sim-GWO, Ki/6'     }       NaN           NaN            NaN           NaN         19.715     11.42       51.6     0.019037      1.973
+    {'HW GA (bench best)'}       NaN           NaN            NaN           NaN         26.488     10.38      55.46     0.018801     2.6269
+    {'HW baseline'       }       NaN           NaN            NaN           NaN         1.1652     29.24      47.46     0.018608    0.25781
+
+DONE. Send me the two tables printed above, Sim_Check_Results.csv and Sim_Check_PartB.png

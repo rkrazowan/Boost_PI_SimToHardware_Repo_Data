@@ -1,0 +1,405 @@
+Budget 170 min | 1 analytic cost eval = 0.135 s | 1 Simulink run = 8.6 s
+PLAN: pop = 17, iterations = 39, runs = 15 per algorithm (equal evaluations for all)
+      expected optimisation time ~ 91.9 min | Simulink validation: 25 scenarios x 9 designs ~ 32.4 min
+Search range: Kp = [0 0.03], Ki = [1.5 150] (Ki on log scale) | 17 scenarios
+PSO           run  1/15 | J = 0.0757 | Kp = 0.01622 | Ki = 45.025 | 73 s | elapsed 1.4 min
+PSO           run  2/15 | J = 0.0766 | Kp = 0.01908 | Ki = 46.777 | 76 s | elapsed 2.7 min
+PSO           run  3/15 | J = 0.0766 | Kp = 0.01908 | Ki = 46.771 | 72 s | elapsed 3.9 min
+PSO           run  4/15 | J = 0.0758 | Kp = 0.01589 | Ki = 44.759 | 70 s | elapsed 5.1 min
+PSO           run  5/15 | J = 0.0766 | Kp = 0.01906 | Ki = 46.808 | 69 s | elapsed 6.2 min
+PSO           run  6/15 | J = 0.0757 | Kp = 0.01602 | Ki = 44.959 | 69 s | elapsed 7.4 min
+PSO           run  7/15 | J = 0.0757 | Kp = 0.01618 | Ki = 44.991 | 69 s | elapsed 8.5 min
+PSO           run  8/15 | J = 0.0757 | Kp = 0.01614 | Ki = 44.976 | 70 s | elapsed 9.7 min
+PSO           run  9/15 | J = 0.0757 | Kp = 0.01611 | Ki = 44.906 | 71 s | elapsed 10.9 min
+PSO           run 10/15 | J = 0.0766 | Kp = 0.01909 | Ki = 46.767 | 69 s | elapsed 12.0 min
+PSO           run 11/15 | J = 0.0757 | Kp = 0.01616 | Ki = 44.953 | 70 s | elapsed 13.2 min
+PSO           run 12/15 | J = 0.0766 | Kp = 0.01906 | Ki = 46.801 | 78 s | elapsed 14.5 min
+PSO           run 13/15 | J = 0.0766 | Kp = 0.01906 | Ki = 46.793 | 146 s | elapsed 16.9 min
+PSO           run 14/15 | J = 0.0766 | Kp = 0.01908 | Ki = 46.790 | 118 s | elapsed 18.9 min
+PSO           run 15/15 | J = 0.0757 | Kp = 0.01618 | Ki = 45.012 | 95 s | elapsed 20.5 min
+GA            run  1/15 | J = 0.0759 | Kp = 0.01561 | Ki = 44.656 | 84 s | elapsed 21.9 min
+GA            run  2/15 | J = 0.0767 | Kp = 0.01886 | Ki = 46.521 | 75 s | elapsed 23.1 min
+GA            run  3/15 | J = 0.0758 | Kp = 0.01599 | Ki = 44.808 | 71 s | elapsed 24.3 min
+GA            run  4/15 | J = 0.0757 | Kp = 0.01601 | Ki = 44.814 | 71 s | elapsed 25.5 min
+GA            run  5/15 | J = 0.0803 | Kp = 0.01359 | Ki = 42.597 | 71 s | elapsed 26.7 min
+GA            run  6/15 | J = 0.0757 | Kp = 0.01622 | Ki = 45.025 | 71 s | elapsed 27.9 min
+GA            run  7/15 | J = 0.0768 | Kp = 0.01965 | Ki = 46.484 | 71 s | elapsed 29.0 min
+GA            run  8/15 | J = 0.0796 | Kp = 0.01393 | Ki = 42.126 | 70 s | elapsed 30.2 min
+GA            run  9/15 | J = 0.0766 | Kp = 0.01899 | Ki = 46.739 | 71 s | elapsed 31.4 min
+GA            run 10/15 | J = 0.0766 | Kp = 0.01905 | Ki = 46.800 | 73 s | elapsed 32.6 min
+GA            run 11/15 | J = 0.0757 | Kp = 0.01604 | Ki = 44.850 | 70 s | elapsed 33.8 min
+GA            run 12/15 | J = 0.0800 | Kp = 0.01624 | Ki = 45.227 | 70 s | elapsed 35.0 min
+GA            run 13/15 | J = 0.0757 | Kp = 0.01606 | Ki = 44.871 | 70 s | elapsed 36.1 min
+GA            run 14/15 | J = 0.0793 | Kp = 0.01394 | Ki = 42.805 | 71 s | elapsed 37.3 min
+GA            run 15/15 | J = 0.0766 | Kp = 0.01913 | Ki = 46.612 | 71 s | elapsed 38.5 min
+GWO           run  1/15 | J = 0.0766 | Kp = 0.01905 | Ki = 46.861 | 72 s | elapsed 39.7 min
+GWO           run  2/15 | J = 0.0758 | Kp = 0.01582 | Ki = 44.841 | 70 s | elapsed 40.8 min
+GWO           run  3/15 | J = 0.0766 | Kp = 0.01919 | Ki = 46.641 | 70 s | elapsed 42.0 min
+GWO           run  4/15 | J = 0.0767 | Kp = 0.01890 | Ki = 46.706 | 70 s | elapsed 43.2 min
+GWO           run  5/15 | J = 0.0766 | Kp = 0.01922 | Ki = 46.681 | 70 s | elapsed 44.4 min
+GWO           run  6/15 | J = 0.0768 | Kp = 0.01975 | Ki = 46.661 | 71 s | elapsed 45.5 min
+GWO           run  7/15 | J = 0.0769 | Kp = 0.01889 | Ki = 46.251 | 70 s | elapsed 46.7 min
+GWO           run  8/15 | J = 0.0759 | Kp = 0.01552 | Ki = 44.531 | 71 s | elapsed 47.9 min
+GWO           run  9/15 | J = 0.0768 | Kp = 0.01865 | Ki = 46.540 | 70 s | elapsed 49.0 min
+GWO           run 10/15 | J = 0.0766 | Kp = 0.01920 | Ki = 46.809 | 70 s | elapsed 50.2 min
+GWO           run 11/15 | J = 0.0766 | Kp = 0.01925 | Ki = 46.657 | 70 s | elapsed 51.4 min
+GWO           run 12/15 | J = 0.0766 | Kp = 0.01913 | Ki = 46.816 | 70 s | elapsed 52.5 min
+GWO           run 13/15 | J = 0.0757 | Kp = 0.01614 | Ki = 44.964 | 69 s | elapsed 53.7 min
+GWO           run 14/15 | J = 0.0766 | Kp = 0.01914 | Ki = 46.756 | 70 s | elapsed 54.9 min
+GWO           run 15/15 | J = 0.0766 | Kp = 0.01913 | Ki = 46.608 | 70 s | elapsed 56.0 min
+NSGA-II knee  run  1/15 | J = 0.1528 | Kp = 0.01807 | Ki = 48.411 | 72 s | elapsed 57.2 min
+NSGA-II knee  run  2/15 | J = 0.2245 | Kp = 0.01757 | Ki = 49.614 | 70 s | elapsed 58.4 min
+NSGA-II knee  run  3/15 | J = 0.4590 | Kp = 0.01819 | Ki = 52.721 | 70 s | elapsed 59.6 min
+NSGA-II knee  run  4/15 | J = 0.1524 | Kp = 0.01685 | Ki = 47.724 | 71 s | elapsed 60.7 min
+NSGA-II knee  run  5/15 | J = 0.1531 | Kp = 0.01695 | Ki = 47.842 | 71 s | elapsed 61.9 min
+NSGA-II knee  run  6/15 | J = 0.2541 | Kp = 0.01752 | Ki = 50.047 | 70 s | elapsed 63.1 min
+NSGA-II knee  run  7/15 | J = 0.3136 | Kp = 0.01795 | Ki = 50.728 | 70 s | elapsed 64.3 min
+NSGA-II knee  run  8/15 | J = 0.0918 | Kp = 0.01238 | Ki = 42.056 | 71 s | elapsed 65.4 min
+NSGA-II knee  run  9/15 | J = 0.4922 | Kp = 0.01943 | Ki = 52.945 | 71 s | elapsed 66.6 min
+NSGA-II knee  run 10/15 | J = 0.0992 | Kp = 0.02769 | Ki = 46.864 | 70 s | elapsed 67.8 min
+NSGA-II knee  run 11/15 | J = 0.0771 | Kp = 0.01907 | Ki = 46.010 | 70 s | elapsed 69.0 min
+NSGA-II knee  run 12/15 | J = 0.0768 | Kp = 0.01963 | Ki = 46.360 | 70 s | elapsed 70.1 min
+NSGA-II knee  run 13/15 | J = 0.5924 | Kp = 0.01673 | Ki = 54.104 | 70 s | elapsed 71.3 min
+NSGA-II knee  run 14/15 | J = 0.4296 | Kp = 0.01787 | Ki = 52.392 | 71 s | elapsed 72.5 min
+NSGA-II knee  run 15/15 | J = 0.6133 | Kp = 0.02260 | Ki = 54.785 | 70 s | elapsed 73.7 min
+
+--- Optimiser statistics (15 runs, final worst-case cost J) ---
+      <strong>Algorithm</strong>        <strong>J_best</strong>     <strong>J_median</strong>     <strong>J_mean</strong>       <strong>J_std</strong>       <strong>J_worst</strong>     <strong>Time_s_per_run</strong>    <strong>Kp_best</strong>     <strong>Ki_best</strong>
+    <strong>______________</strong>    <strong>________</strong>    <strong>________</strong>    <strong>________</strong>    <strong>__________</strong>    <strong>________</strong>    <strong>______________</strong>    <strong>________</strong>    <strong>_______</strong>
+
+    "PSO"             0.075663    0.075778    0.076097    0.00044442    0.076557        81.026         0.01622    45.025 
+    "GA"              0.075662    0.076601    0.077125     0.0017207    0.080279         72.01        0.016221    45.025 
+    "GWO"             0.075686    0.076609    0.076493     0.0003813    0.076895          70.2         0.01614    44.964 
+    "NSGA-II knee"     0.07684     0.22447      0.2788       0.19126     0.61335        70.518        0.019634     46.36 
+
+NSGA-II hypervolume: mean 0.7948, std 0.0220 (NSGA-II J is the knee point, not a minimiser of J)
+Rank-sum p-values (rows vs columns):
+                       <strong>PSO</strong>            <strong>GA</strong>           <strong>GWO</strong>        <strong>NSGA_II knee</strong>
+                    <strong>__________</strong>    <strong>__________</strong>    <strong>__________</strong>    <strong>____________</strong>
+
+    <strong>PSO         </strong>           NaN      0.019103    0.00024178      3.067e-06 
+    <strong>GA          </strong>      0.019103           NaN       0.85193     1.4612e-05 
+    <strong>GWO         </strong>    0.00024178       0.85193           NaN     4.5764e-06 
+    <strong>NSGA_II knee</strong>     3.067e-06    1.4612e-05    4.5764e-06            NaN 
+
+
+--- Worst case over all 17 corner scenarios (analytic) ---
+         <strong>Design</strong>            <strong>Kp</strong>         <strong>Ki</strong>      <strong>WorstOS_pct</strong>    <strong>WorstTs_ms</strong>    <strong>WorstTr_ms</strong>    <strong>WorstIAE_ms</strong>    <strong>MinPM_deg</strong>    <strong>J_worstcase</strong>
+    <strong>________________</strong>    <strong>________</strong>    <strong>______</strong>    <strong>___________</strong>    <strong>__________</strong>    <strong>__________</strong>    <strong>___________</strong>    <strong>_________</strong>    <strong>___________</strong>
+
+    "pidtune wc=100"           0    3.0443             0       46.894        26.253         12.031         87.9         0.9676  
+    "pidtune wc=150"           0    4.5652             0       31.263        17.435         8.0244       86.845        0.64492  
+    "pidtune wc=300"           0    9.1165    4.4409e-14       15.631        8.6172         4.0183       83.642         0.3223  
+    "Auto (app)"               0    48.057        29.988       5.8116        1.4028         1.0686       43.636         2.9403  
+    "Slider (app)"       0.00243    15.314    8.8818e-14       9.6192        5.2104         2.3921       84.787        0.19566  
+    "PSO"                0.01622    45.025       0.31812        4.008        2.2044        0.81368       64.905       0.075663  
+    "GA"                0.016221    45.025       0.31769        4.008        2.2044        0.81369         64.9       0.075662  
+    "GWO"                0.01614    44.964       0.31043        4.008        2.2044        0.81478       65.239       0.075686  
+    "NSGA-II knee"      0.019634     46.36    2.2204e-14       4.2084        2.2044        0.79031       55.497        0.07684  
+
+
+--- Monte Carlo (500 random held-out scenarios). Spec: OS<=10%, Ts<=20 ms, PM>=45 deg ---
+         <strong>Design</strong>         <strong>Unstable_pct</strong>    <strong>SpecMet_pct</strong>    <strong>OS_mean_pct</strong>    <strong>OS_p95_pct</strong>    <strong>OS_max_pct</strong>    <strong>Ts_p95_ms</strong>    <strong>PM_min_deg</strong>
+    <strong>________________</strong>    <strong>____________</strong>    <strong>___________</strong>    <strong>___________</strong>    <strong>__________</strong>    <strong>__________</strong>    <strong>_________</strong>    <strong>__________</strong>
+
+    "pidtune wc=100"         0                0                 0              0             0     45.892        87.988  
+    "pidtune wc=150"         0                0                 0              0             0     30.461         86.98  
+    "pidtune wc=300"         0              100        1.9096e-15              0    8.8818e-14      15.23        83.947  
+    "Auto (app)"             0             83.6            3.9696          17.99        25.557      4.018        47.837  
+    "Slider (app)"           0              100        4.6629e-15     4.4409e-14    8.8818e-14     9.4188        85.354  
+    "PSO"                    0              100        5.1514e-15     2.2204e-14    4.4409e-14      4.008        69.693  
+    "GA"                     0              100        6.2172e-15     4.4409e-14    6.6613e-14      4.008        69.689  
+    "GWO"                    0              100         9.992e-15     4.4409e-14    2.2204e-12      4.008        70.032  
+    "NSGA-II knee"           0              100        6.1284e-15     4.4409e-14    6.6613e-14      4.008        58.741  
+
+
+--- Disturbance rejection: Vin -20% step and +20% load-current step (peak in % of Vref) ---
+         <strong>Design</strong>         <strong>LinePeak_nom_pct</strong>    <strong>LinePeak_worst_pct</strong>    <strong>LineRecov_worst_ms</strong>    <strong>LoadPeak_nom_pct</strong>    <strong>LoadPeak_worst_pct</strong>    <strong>LoadRecov_worst_ms</strong>
+    <strong>________________</strong>    <strong>________________</strong>    <strong>__________________</strong>    <strong>__________________</strong>    <strong>________________</strong>    <strong>__________________</strong>    <strong>__________________</strong>
+
+    "pidtune wc=100"         24.104               25.905                27.655              0.092192             0.26097                  0         
+    "pidtune wc=150"          23.95               25.809                18.437               0.09214             0.26086                  0         
+    "pidtune wc=300"          23.49                25.61                9.2184              0.091982             0.26053                  0         
+    "Auto (app)"             19.667                24.08                4.2084              0.090636             0.26933                  0         
+    "Slider (app)"           21.525               24.434                5.8116              0.090285             0.25685                  0         
+    "PSO"                    15.249               18.667                2.4048              0.081134             0.23677                  0         
+    "GA"                     15.249               18.667                2.4048              0.081133             0.23677                  0         
+    "GWO"                    15.265               18.694                2.4048              0.081182             0.23687                  0         
+    "NSGA-II knee"            14.61               17.606                2.6052              0.079142             0.23233                  0         
+
+Simulink   1/225 | pidtune wc=100 | Vin100% L100% C100% R100% | elapsed 74.2 min
+Simulink   2/225 | pidtune wc=100 | Vin80% L120% C120% R150% | elapsed 74.5 min
+Simulink   3/225 | pidtune wc=100 | Vin80% L120% C120% R50% | elapsed 74.7 min
+Simulink   4/225 | pidtune wc=100 | Vin80% L120% C80% R150% | elapsed 74.8 min
+Simulink   5/225 | pidtune wc=100 | Vin80% L120% C80% R50% | elapsed 75.0 min
+Simulink   6/225 | pidtune wc=100 | Vin80% L80% C120% R150% | elapsed 75.1 min
+Simulink   7/225 | pidtune wc=100 | Vin80% L80% C120% R50% | elapsed 75.2 min
+Simulink   8/225 | pidtune wc=100 | Vin120% L120% C120% R50% | elapsed 75.4 min
+Simulink   9/225 | pidtune wc=100 | Vin120% L120% C80% R50% | elapsed 75.5 min
+Simulink  10/225 | pidtune wc=100 | Vin120% L80% C80% R50% | elapsed 75.6 min
+Simulink  11/225 | pidtune wc=100 | Vin120% L80% C120% R50% | elapsed 75.8 min
+Simulink  12/225 | pidtune wc=100 | Vin120% L120% C120% R150% | elapsed 75.9 min
+Simulink  13/225 | pidtune wc=100 | Vin120% L120% C80% R150% | elapsed 76.0 min
+Simulink  14/225 | pidtune wc=100 | Vin120% L80% C80% R150% | elapsed 76.1 min
+Simulink  15/225 | pidtune wc=100 | Vin120% L80% C120% R150% | elapsed 76.3 min
+Simulink  16/225 | pidtune wc=100 | Vin80% L80% C80% R150% | elapsed 76.4 min
+Simulink  17/225 | pidtune wc=100 | Vin103% L82% C119% R141% | elapsed 76.5 min
+Simulink  18/225 | pidtune wc=100 | Vin110% L116% C95% R53% | elapsed 76.7 min
+Simulink  19/225 | pidtune wc=100 | Vin115% L101% C81% R63% | elapsed 76.8 min
+Simulink  20/225 | pidtune wc=100 | Vin81% L104% C94% R107% | elapsed 76.9 min
+Simulink  21/225 | pidtune wc=100 | Vin82% L96% C100% R114% | elapsed 77.1 min
+Simulink  22/225 | pidtune wc=100 | Vin119% L103% C84% R95% | elapsed 77.2 min
+Simulink  23/225 | pidtune wc=100 | Vin83% L94% C109% R95% | elapsed 77.3 min
+Simulink  24/225 | pidtune wc=100 | Vin95% L99% C86% R122% | elapsed 77.5 min
+Simulink  25/225 | pidtune wc=100 | Vin107% L84% C115% R115% | elapsed 77.6 min
+Simulink  26/225 | pidtune wc=150 | Vin100% L100% C100% R100% | elapsed 77.7 min
+Simulink  27/225 | pidtune wc=150 | Vin80% L120% C120% R150% | elapsed 77.9 min
+Simulink  28/225 | pidtune wc=150 | Vin80% L120% C120% R50% | elapsed 78.0 min
+Simulink  29/225 | pidtune wc=150 | Vin80% L120% C80% R150% | elapsed 78.2 min
+Simulink  30/225 | pidtune wc=150 | Vin80% L120% C80% R50% | elapsed 78.4 min
+Simulink  31/225 | pidtune wc=150 | Vin80% L80% C120% R150% | elapsed 78.6 min
+Simulink  32/225 | pidtune wc=150 | Vin80% L80% C120% R50% | elapsed 78.7 min
+Simulink  33/225 | pidtune wc=150 | Vin120% L120% C120% R50% | elapsed 79.0 min
+Simulink  34/225 | pidtune wc=150 | Vin120% L120% C80% R50% | elapsed 79.2 min
+Simulink  35/225 | pidtune wc=150 | Vin120% L80% C80% R50% | elapsed 79.3 min
+Simulink  36/225 | pidtune wc=150 | Vin120% L80% C120% R50% | elapsed 79.5 min
+Simulink  37/225 | pidtune wc=150 | Vin120% L120% C120% R150% | elapsed 79.6 min
+Simulink  38/225 | pidtune wc=150 | Vin120% L120% C80% R150% | elapsed 79.8 min
+Simulink  39/225 | pidtune wc=150 | Vin120% L80% C80% R150% | elapsed 79.9 min
+Simulink  40/225 | pidtune wc=150 | Vin120% L80% C120% R150% | elapsed 80.1 min
+Simulink  41/225 | pidtune wc=150 | Vin80% L80% C80% R150% | elapsed 80.2 min
+Simulink  42/225 | pidtune wc=150 | Vin103% L82% C119% R141% | elapsed 80.4 min
+Simulink  43/225 | pidtune wc=150 | Vin110% L116% C95% R53% | elapsed 80.5 min
+Simulink  44/225 | pidtune wc=150 | Vin115% L101% C81% R63% | elapsed 80.7 min
+Simulink  45/225 | pidtune wc=150 | Vin81% L104% C94% R107% | elapsed 80.8 min
+Simulink  46/225 | pidtune wc=150 | Vin82% L96% C100% R114% | elapsed 81.0 min
+Simulink  47/225 | pidtune wc=150 | Vin119% L103% C84% R95% | elapsed 81.2 min
+Simulink  48/225 | pidtune wc=150 | Vin83% L94% C109% R95% | elapsed 81.3 min
+Simulink  49/225 | pidtune wc=150 | Vin95% L99% C86% R122% | elapsed 81.5 min
+Simulink  50/225 | pidtune wc=150 | Vin107% L84% C115% R115% | elapsed 81.6 min
+Simulink  51/225 | pidtune wc=300 | Vin100% L100% C100% R100% | elapsed 81.8 min
+Simulink  52/225 | pidtune wc=300 | Vin80% L120% C120% R150% | elapsed 81.9 min
+Simulink  53/225 | pidtune wc=300 | Vin80% L120% C120% R50% | elapsed 82.1 min
+Simulink  54/225 | pidtune wc=300 | Vin80% L120% C80% R150% | elapsed 82.3 min
+Simulink  55/225 | pidtune wc=300 | Vin80% L120% C80% R50% | elapsed 82.5 min
+Simulink  56/225 | pidtune wc=300 | Vin80% L80% C120% R150% | elapsed 82.7 min
+Simulink  57/225 | pidtune wc=300 | Vin80% L80% C120% R50% | elapsed 82.8 min
+Simulink  58/225 | pidtune wc=300 | Vin120% L120% C120% R50% | elapsed 83.0 min
+Simulink  59/225 | pidtune wc=300 | Vin120% L120% C80% R50% | elapsed 83.2 min
+Simulink  60/225 | pidtune wc=300 | Vin120% L80% C80% R50% | elapsed 83.4 min
+Simulink  61/225 | pidtune wc=300 | Vin120% L80% C120% R50% | elapsed 83.5 min
+Simulink  62/225 | pidtune wc=300 | Vin120% L120% C120% R150% | elapsed 83.6 min
+Simulink  63/225 | pidtune wc=300 | Vin120% L120% C80% R150% | elapsed 83.8 min
+Simulink  64/225 | pidtune wc=300 | Vin120% L80% C80% R150% | elapsed 83.9 min
+Simulink  65/225 | pidtune wc=300 | Vin120% L80% C120% R150% | elapsed 84.0 min
+Simulink  66/225 | pidtune wc=300 | Vin80% L80% C80% R150% | elapsed 84.2 min
+Simulink  67/225 | pidtune wc=300 | Vin103% L82% C119% R141% | elapsed 84.3 min
+Simulink  68/225 | pidtune wc=300 | Vin110% L116% C95% R53% | elapsed 84.5 min
+Simulink  69/225 | pidtune wc=300 | Vin115% L101% C81% R63% | elapsed 84.7 min
+Simulink  70/225 | pidtune wc=300 | Vin81% L104% C94% R107% | elapsed 84.9 min
+Simulink  71/225 | pidtune wc=300 | Vin82% L96% C100% R114% | elapsed 85.1 min
+Simulink  72/225 | pidtune wc=300 | Vin119% L103% C84% R95% | elapsed 85.5 min
+Simulink  73/225 | pidtune wc=300 | Vin83% L94% C109% R95% | elapsed 85.7 min
+Simulink  74/225 | pidtune wc=300 | Vin95% L99% C86% R122% | elapsed 85.9 min
+Simulink  75/225 | pidtune wc=300 | Vin107% L84% C115% R115% | elapsed 86.0 min
+Simulink  76/225 | Auto (app)     | Vin100% L100% C100% R100% | elapsed 86.3 min
+Simulink  77/225 | Auto (app)     | Vin80% L120% C120% R150% | elapsed 86.4 min
+Simulink  78/225 | Auto (app)     | Vin80% L120% C120% R50% | elapsed 86.7 min
+Simulink  79/225 | Auto (app)     | Vin80% L120% C80% R150% | elapsed 87.1 min
+Simulink  80/225 | Auto (app)     | Vin80% L120% C80% R50% | elapsed 87.3 min
+Simulink  81/225 | Auto (app)     | Vin80% L80% C120% R150% | elapsed 87.6 min
+Simulink  82/225 | Auto (app)     | Vin80% L80% C120% R50% | elapsed 87.8 min
+Simulink  83/225 | Auto (app)     | Vin120% L120% C120% R50% | elapsed 88.0 min
+Simulink  84/225 | Auto (app)     | Vin120% L120% C80% R50% | elapsed 88.1 min
+Simulink  85/225 | Auto (app)     | Vin120% L80% C80% R50% | elapsed 88.3 min
+Simulink  86/225 | Auto (app)     | Vin120% L80% C120% R50% | elapsed 88.5 min
+Simulink  87/225 | Auto (app)     | Vin120% L120% C120% R150% | elapsed 88.7 min
+Simulink  88/225 | Auto (app)     | Vin120% L120% C80% R150% | elapsed 88.8 min
+Simulink  89/225 | Auto (app)     | Vin120% L80% C80% R150% | elapsed 89.0 min
+Simulink  90/225 | Auto (app)     | Vin120% L80% C120% R150% | elapsed 89.2 min
+Simulink  91/225 | Auto (app)     | Vin80% L80% C80% R150% | elapsed 89.3 min
+Simulink  92/225 | Auto (app)     | Vin103% L82% C119% R141% | elapsed 89.5 min
+Simulink  93/225 | Auto (app)     | Vin110% L116% C95% R53% | elapsed 89.7 min
+Simulink  94/225 | Auto (app)     | Vin115% L101% C81% R63% | elapsed 90.2 min
+Simulink  95/225 | Auto (app)     | Vin81% L104% C94% R107% | elapsed 90.8 min
+Simulink  96/225 | Auto (app)     | Vin82% L96% C100% R114% | elapsed 91.3 min
+Simulink  97/225 | Auto (app)     | Vin119% L103% C84% R95% | elapsed 91.8 min
+Simulink  98/225 | Auto (app)     | Vin83% L94% C109% R95% | elapsed 92.1 min
+Simulink  99/225 | Auto (app)     | Vin95% L99% C86% R122% | elapsed 92.3 min
+Simulink 100/225 | Auto (app)     | Vin107% L84% C115% R115% | elapsed 92.5 min
+Simulink 101/225 | Slider (app)   | Vin100% L100% C100% R100% | elapsed 92.7 min
+Simulink 102/225 | Slider (app)   | Vin80% L120% C120% R150% | elapsed 92.9 min
+Simulink 103/225 | Slider (app)   | Vin80% L120% C120% R50% | elapsed 93.1 min
+Simulink 104/225 | Slider (app)   | Vin80% L120% C80% R150% | elapsed 93.4 min
+Simulink 105/225 | Slider (app)   | Vin80% L120% C80% R50% | elapsed 93.5 min
+Simulink 106/225 | Slider (app)   | Vin80% L80% C120% R150% | elapsed 93.8 min
+Simulink 107/225 | Slider (app)   | Vin80% L80% C120% R50% | elapsed 94.0 min
+Simulink 108/225 | Slider (app)   | Vin120% L120% C120% R50% | elapsed 94.2 min
+Simulink 109/225 | Slider (app)   | Vin120% L120% C80% R50% | elapsed 94.4 min
+Simulink 110/225 | Slider (app)   | Vin120% L80% C80% R50% | elapsed 94.6 min
+Simulink 111/225 | Slider (app)   | Vin120% L80% C120% R50% | elapsed 94.8 min
+Simulink 112/225 | Slider (app)   | Vin120% L120% C120% R150% | elapsed 94.9 min
+Simulink 113/225 | Slider (app)   | Vin120% L120% C80% R150% | elapsed 95.2 min
+Simulink 114/225 | Slider (app)   | Vin120% L80% C80% R150% | elapsed 95.3 min
+Simulink 115/225 | Slider (app)   | Vin120% L80% C120% R150% | elapsed 95.5 min
+Simulink 116/225 | Slider (app)   | Vin80% L80% C80% R150% | elapsed 95.7 min
+Simulink 117/225 | Slider (app)   | Vin103% L82% C119% R141% | elapsed 96.0 min
+Simulink 118/225 | Slider (app)   | Vin110% L116% C95% R53% | elapsed 96.2 min
+Simulink 119/225 | Slider (app)   | Vin115% L101% C81% R63% | elapsed 96.4 min
+Simulink 120/225 | Slider (app)   | Vin81% L104% C94% R107% | elapsed 96.5 min
+Simulink 121/225 | Slider (app)   | Vin82% L96% C100% R114% | elapsed 96.7 min
+Simulink 122/225 | Slider (app)   | Vin119% L103% C84% R95% | elapsed 96.9 min
+Simulink 123/225 | Slider (app)   | Vin83% L94% C109% R95% | elapsed 97.1 min
+Simulink 124/225 | Slider (app)   | Vin95% L99% C86% R122% | elapsed 97.2 min
+Simulink 125/225 | Slider (app)   | Vin107% L84% C115% R115% | elapsed 97.4 min
+Simulink 126/225 | PSO            | Vin100% L100% C100% R100% | elapsed 97.5 min
+Simulink 127/225 | PSO            | Vin80% L120% C120% R150% | elapsed 97.7 min
+Simulink 128/225 | PSO            | Vin80% L120% C120% R50% | elapsed 97.8 min
+Simulink 129/225 | PSO            | Vin80% L120% C80% R150% | elapsed 98.0 min
+Simulink 130/225 | PSO            | Vin80% L120% C80% R50% | elapsed 98.2 min
+Simulink 131/225 | PSO            | Vin80% L80% C120% R150% | elapsed 98.3 min
+Simulink 132/225 | PSO            | Vin80% L80% C120% R50% | elapsed 98.5 min
+Simulink 133/225 | PSO            | Vin120% L120% C120% R50% | elapsed 98.7 min
+Simulink 134/225 | PSO            | Vin120% L120% C80% R50% | elapsed 98.9 min
+Simulink 135/225 | PSO            | Vin120% L80% C80% R50% | elapsed 99.1 min
+Simulink 136/225 | PSO            | Vin120% L80% C120% R50% | elapsed 99.3 min
+Simulink 137/225 | PSO            | Vin120% L120% C120% R150% | elapsed 99.5 min
+Simulink 138/225 | PSO            | Vin120% L120% C80% R150% | elapsed 99.7 min
+Simulink 139/225 | PSO            | Vin120% L80% C80% R150% | elapsed 99.8 min
+Simulink 140/225 | PSO            | Vin120% L80% C120% R150% | elapsed 100.0 min
+Simulink 141/225 | PSO            | Vin80% L80% C80% R150% | elapsed 100.2 min
+Simulink 142/225 | PSO            | Vin103% L82% C119% R141% | elapsed 100.4 min
+Simulink 143/225 | PSO            | Vin110% L116% C95% R53% | elapsed 100.5 min
+Simulink 144/225 | PSO            | Vin115% L101% C81% R63% | elapsed 100.7 min
+Simulink 145/225 | PSO            | Vin81% L104% C94% R107% | elapsed 100.8 min
+Simulink 146/225 | PSO            | Vin82% L96% C100% R114% | elapsed 101.0 min
+Simulink 147/225 | PSO            | Vin119% L103% C84% R95% | elapsed 101.2 min
+Simulink 148/225 | PSO            | Vin83% L94% C109% R95% | elapsed 101.3 min
+Simulink 149/225 | PSO            | Vin95% L99% C86% R122% | elapsed 101.5 min
+Simulink 150/225 | PSO            | Vin107% L84% C115% R115% | elapsed 101.6 min
+Simulink 151/225 | GA             | Vin100% L100% C100% R100% | elapsed 101.8 min
+Simulink 152/225 | GA             | Vin80% L120% C120% R150% | elapsed 102.0 min
+Simulink 153/225 | GA             | Vin80% L120% C120% R50% | elapsed 102.1 min
+Simulink 154/225 | GA             | Vin80% L120% C80% R150% | elapsed 102.3 min
+Simulink 155/225 | GA             | Vin80% L120% C80% R50% | elapsed 102.4 min
+Simulink 156/225 | GA             | Vin80% L80% C120% R150% | elapsed 102.6 min
+Simulink 157/225 | GA             | Vin80% L80% C120% R50% | elapsed 102.8 min
+Simulink 158/225 | GA             | Vin120% L120% C120% R50% | elapsed 103.0 min
+Simulink 159/225 | GA             | Vin120% L120% C80% R50% | elapsed 103.1 min
+Simulink 160/225 | GA             | Vin120% L80% C80% R50% | elapsed 103.3 min
+Simulink 161/225 | GA             | Vin120% L80% C120% R50% | elapsed 103.4 min
+Simulink 162/225 | GA             | Vin120% L120% C120% R150% | elapsed 103.6 min
+Simulink 163/225 | GA             | Vin120% L120% C80% R150% | elapsed 103.7 min
+Simulink 164/225 | GA             | Vin120% L80% C80% R150% | elapsed 103.8 min
+Simulink 165/225 | GA             | Vin120% L80% C120% R150% | elapsed 104.0 min
+Simulink 166/225 | GA             | Vin80% L80% C80% R150% | elapsed 104.1 min
+Simulink 167/225 | GA             | Vin103% L82% C119% R141% | elapsed 104.2 min
+Simulink 168/225 | GA             | Vin110% L116% C95% R53% | elapsed 104.4 min
+Simulink 169/225 | GA             | Vin115% L101% C81% R63% | elapsed 104.5 min
+Simulink 170/225 | GA             | Vin81% L104% C94% R107% | elapsed 104.7 min
+Simulink 171/225 | GA             | Vin82% L96% C100% R114% | elapsed 104.8 min
+Simulink 172/225 | GA             | Vin119% L103% C84% R95% | elapsed 104.9 min
+Simulink 173/225 | GA             | Vin83% L94% C109% R95% | elapsed 105.1 min
+Simulink 174/225 | GA             | Vin95% L99% C86% R122% | elapsed 105.2 min
+Simulink 175/225 | GA             | Vin107% L84% C115% R115% | elapsed 105.4 min
+Simulink 176/225 | GWO            | Vin100% L100% C100% R100% | elapsed 105.5 min
+Simulink 177/225 | GWO            | Vin80% L120% C120% R150% | elapsed 105.6 min
+Simulink 178/225 | GWO            | Vin80% L120% C120% R50% | elapsed 105.8 min
+Simulink 179/225 | GWO            | Vin80% L120% C80% R150% | elapsed 105.9 min
+Simulink 180/225 | GWO            | Vin80% L120% C80% R50% | elapsed 106.1 min
+Simulink 181/225 | GWO            | Vin80% L80% C120% R150% | elapsed 106.2 min
+Simulink 182/225 | GWO            | Vin80% L80% C120% R50% | elapsed 106.4 min
+Simulink 183/225 | GWO            | Vin120% L120% C120% R50% | elapsed 106.5 min
+Simulink 184/225 | GWO            | Vin120% L120% C80% R50% | elapsed 106.7 min
+Simulink 185/225 | GWO            | Vin120% L80% C80% R50% | elapsed 106.9 min
+Simulink 186/225 | GWO            | Vin120% L80% C120% R50% | elapsed 107.0 min
+Simulink 187/225 | GWO            | Vin120% L120% C120% R150% | elapsed 107.2 min
+Simulink 188/225 | GWO            | Vin120% L120% C80% R150% | elapsed 107.4 min
+Simulink 189/225 | GWO            | Vin120% L80% C80% R150% | elapsed 107.6 min
+Simulink 190/225 | GWO            | Vin120% L80% C120% R150% | elapsed 107.7 min
+Simulink 191/225 | GWO            | Vin80% L80% C80% R150% | elapsed 107.9 min
+Simulink 192/225 | GWO            | Vin103% L82% C119% R141% | elapsed 108.0 min
+Simulink 193/225 | GWO            | Vin110% L116% C95% R53% | elapsed 108.4 min
+Simulink 194/225 | GWO            | Vin115% L101% C81% R63% | elapsed 108.6 min
+Simulink 195/225 | GWO            | Vin81% L104% C94% R107% | elapsed 108.7 min
+Simulink 196/225 | GWO            | Vin82% L96% C100% R114% | elapsed 108.9 min
+Simulink 197/225 | GWO            | Vin119% L103% C84% R95% | elapsed 109.2 min
+Simulink 198/225 | GWO            | Vin83% L94% C109% R95% | elapsed 109.4 min
+Simulink 199/225 | GWO            | Vin95% L99% C86% R122% | elapsed 109.6 min
+Simulink 200/225 | GWO            | Vin107% L84% C115% R115% | elapsed 109.9 min
+Simulink 201/225 | NSGA-II knee   | Vin100% L100% C100% R100% | elapsed 110.0 min
+Simulink 202/225 | NSGA-II knee   | Vin80% L120% C120% R150% | elapsed 110.2 min
+Simulink 203/225 | NSGA-II knee   | Vin80% L120% C120% R50% | elapsed 110.3 min
+Simulink 204/225 | NSGA-II knee   | Vin80% L120% C80% R150% | elapsed 110.5 min
+Simulink 205/225 | NSGA-II knee   | Vin80% L120% C80% R50% | elapsed 110.7 min
+Simulink 206/225 | NSGA-II knee   | Vin80% L80% C120% R150% | elapsed 110.9 min
+Simulink 207/225 | NSGA-II knee   | Vin80% L80% C120% R50% | elapsed 111.1 min
+Simulink 208/225 | NSGA-II knee   | Vin120% L120% C120% R50% | elapsed 111.4 min
+Simulink 209/225 | NSGA-II knee   | Vin120% L120% C80% R50% | elapsed 111.6 min
+Simulink 210/225 | NSGA-II knee   | Vin120% L80% C80% R50% | elapsed 111.8 min
+Simulink 211/225 | NSGA-II knee   | Vin120% L80% C120% R50% | elapsed 112.0 min
+Simulink 212/225 | NSGA-II knee   | Vin120% L120% C120% R150% | elapsed 112.2 min
+Simulink 213/225 | NSGA-II knee   | Vin120% L120% C80% R150% | elapsed 112.4 min
+Simulink 214/225 | NSGA-II knee   | Vin120% L80% C80% R150% | elapsed 112.5 min
+Simulink 215/225 | NSGA-II knee   | Vin120% L80% C120% R150% | elapsed 112.7 min
+Simulink 216/225 | NSGA-II knee   | Vin80% L80% C80% R150% | elapsed 112.9 min
+Simulink 217/225 | NSGA-II knee   | Vin103% L82% C119% R141% | elapsed 113.0 min
+Simulink 218/225 | NSGA-II knee   | Vin110% L116% C95% R53% | elapsed 113.2 min
+Simulink 219/225 | NSGA-II knee   | Vin115% L101% C81% R63% | elapsed 113.3 min
+Simulink 220/225 | NSGA-II knee   | Vin81% L104% C94% R107% | elapsed 113.5 min
+Simulink 221/225 | NSGA-II knee   | Vin82% L96% C100% R114% | elapsed 113.6 min
+Simulink 222/225 | NSGA-II knee   | Vin119% L103% C84% R95% | elapsed 113.8 min
+Simulink 223/225 | NSGA-II knee   | Vin83% L94% C109% R95% | elapsed 114.0 min
+Simulink 224/225 | NSGA-II knee   | Vin95% L99% C86% R122% | elapsed 114.1 min
+Simulink 225/225 | NSGA-II knee   | Vin107% L84% C115% R115% | elapsed 114.3 min
+
+--- Simulink validation (25 scenarios: nominal + 15 worst corners + 9 random held-out) ---
+         <strong>Design</strong>            <strong>Kp</strong>         <strong>Ki</strong>      <strong>WorstOS_pct</strong>    <strong>WorstTs_ms</strong>    <strong>WorstTr_ms</strong>    <strong>WorstIAE_ms</strong>    <strong>WorstSteadyErr_V</strong>    <strong>MaxDuty</strong>    <strong>J_sim</strong> 
+    <strong>________________</strong>    <strong>________</strong>    <strong>______</strong>    <strong>___________</strong>    <strong>__________</strong>    <strong>__________</strong>    <strong>___________</strong>    <strong>________________</strong>    <strong>_______</strong>    <strong>______</strong>
+
+    "pidtune wc=100"           0    3.0443      8.8768         92.74         30.74         12.027             0.13638       0.62179    2.1619
+    "pidtune wc=150"           0    4.5652      11.542         85.68         20.18         10.059             0.17939       0.62179      2.17
+    "pidtune wc=300"           0    9.1165      15.596         90.32         10.76          7.917             0.13851       0.62179    2.5845
+    "Auto (app)"               0    48.057      11.288         56.24          2.32         3.2513             0.01348       0.64867    1.9497
+    "Slider (app)"       0.00243    15.314      14.253         70.54          6.78         5.6468             0.05867       0.62179    2.1555
+    "PSO"                0.01622    45.025      14.288         38.72          2.64         2.1618            0.001122        0.6217    1.5155
+    "GA"                0.016221    45.025      14.289         38.72          2.64         2.1616           0.0011348        0.6217    1.5156
+    "GWO"                0.01614    44.964      14.216          38.8          2.64         2.1693           0.0011342        0.6217    1.5097
+    "NSGA-II knee"      0.019634     46.36      17.186         30.16          2.84         2.0064          0.00094066       0.62167    1.7159
+
+
+--- Final ranking (Simulink worst-case cost) ---
+    <strong>Rank</strong>         <strong>Design</strong>            <strong>Kp</strong>         <strong>Ki</strong>        <strong>J</strong>       <strong>MC_SpecMet_pct</strong>
+    <strong>____</strong>    <strong>________________</strong>    <strong>________</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______________</strong>
+
+     1      "GWO"                0.01614    44.964    1.5097          100     
+     2      "PSO"                0.01622    45.025    1.5155          100     
+     3      "GA"                0.016221    45.025    1.5156          100     
+     4      "NSGA-II knee"      0.019634     46.36    1.7159          100     
+     5      "Auto (app)"               0    48.057    1.9497         83.6     
+     6      "Slider (app)"       0.00243    15.314    2.1555          100     
+     7      "pidtune wc=100"           0    3.0443    2.1619            0     
+     8      "pidtune wc=150"           0    4.5652      2.17            0     
+     9      "pidtune wc=300"           0    9.1165    2.5845          100     
+
+>>> RECOMMENDED: GWO  ->  Kp = 0.016140,  Ki = 44.9642
+
+--- Figure files (Paper_Figures/, each as PDF + PNG + FIG) ---
+  Fig1_Convergence
+  Fig2_Statistics
+  Fig3_KpKi_Plane
+  Fig4_Pareto_Knee
+  Fig5_Step_Analytic
+  Fig6_Robustness_Family
+  Fig7_MonteCarlo
+  Fig8_Disturbance
+  Fig9_Metric_Summary
+  Fig10_Simulink_Validation
+  Fig11_Simulink_Metrics
+  Fig12_Model_Mismatch
+[Warning: Figure is saved in PI_Opt_Results.mat, which might result in a large file size or unexpected behavior when loading the
+figure. To reduce file size, avoid saving graphics objects by specifying which data variables to save. To save a graphics figure
+with additional options for loading, use the savefig function.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Run_PI_Optimization_paper', 'C:\Users\Razowan\Downloads\Research File With Program and paper\Complete Booster PSO GA GWO Algtihom with Hardware and simulation\Run_PI_Optimization_paper.m', 451)" style="font-weight:bold">Run_PI_Optimization_paper</a> (<a href="matlab: opentoline('C:\Users\Razowan\Downloads\Research File With Program and paper\Complete Booster PSO GA GWO Algtihom with Hardware and simulation\Run_PI_Optimization_paper.m',451,0)">line 451</a>)] 
+
+Total time: 115.8 min (budget 170 min). Figures: Paper_Figures/, tables: Paper_Tables/

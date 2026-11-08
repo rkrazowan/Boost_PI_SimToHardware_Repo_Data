@@ -1,0 +1,142 @@
+Main_Run_All
+PSO run 1/30  Kp=0.00000 Ki=0.40835 J=0.6261
+PSO run 2/30  Kp=0.00000 Ki=0.40829 J=0.6262
+PSO run 3/30  Kp=0.00000 Ki=0.40879 J=0.6261
+PSO run 4/30  Kp=0.00000 Ki=0.40979 J=0.6261
+PSO run 5/30  Kp=0.00000 Ki=0.40858 J=0.6261
+PSO run 6/30  Kp=0.00000 Ki=0.40901 J=0.6261
+PSO run 7/30  Kp=0.00000 Ki=0.40867 J=0.6261
+PSO run 8/30  Kp=0.00000 Ki=0.40938 J=0.6261
+PSO run 9/30  Kp=0.00000 Ki=0.40897 J=0.6261
+PSO run 10/30  Kp=0.00000 Ki=0.41226 J=0.6261
+PSO run 11/30  Kp=0.00000 Ki=0.41067 J=0.6262
+PSO run 12/30  Kp=0.00000 Ki=0.40870 J=0.6262
+PSO run 13/30  Kp=0.00000 Ki=0.40897 J=0.6261
+PSO run 14/30  Kp=0.00000 Ki=0.40811 J=0.6262
+PSO run 15/30  Kp=0.00000 Ki=0.40860 J=0.6261
+PSO run 16/30  Kp=0.00000 Ki=0.40944 J=0.6262
+PSO run 17/30  Kp=0.00000 Ki=0.40824 J=0.6261
+PSO run 18/30  Kp=0.00000 Ki=0.40834 J=0.6261
+PSO run 19/30  Kp=0.00000 Ki=0.40866 J=0.6261
+PSO run 20/30  Kp=0.00000 Ki=0.40856 J=0.6261
+PSO run 21/30  Kp=0.00000 Ki=0.40983 J=0.6262
+PSO run 22/30  Kp=0.00000 Ki=0.40863 J=0.6261
+PSO run 23/30  Kp=0.00000 Ki=0.40981 J=0.6261
+PSO run 24/30  Kp=0.00000 Ki=0.40988 J=0.6262
+PSO run 25/30  Kp=0.00000 Ki=0.41228 J=0.6261
+PSO run 26/30  Kp=0.00000 Ki=0.41224 J=0.6261
+PSO run 27/30  Kp=0.00000 Ki=0.40855 J=0.6261
+PSO run 28/30  Kp=0.00000 Ki=0.41089 J=0.6262
+PSO run 29/30  Kp=0.00000 Ki=0.40817 J=0.6261
+PSO run 30/30  Kp=0.00000 Ki=0.40946 J=0.6262
+>> PSO: best 0.6261 | mean 0.6261 | std 0.0000 | worst 0.6262
+
+GWO run 1/30  Kp=0.00041 Ki=0.41265 J=0.6509
+GWO run 2/30  Kp=0.00000 Ki=0.41079 J=0.6262
+GWO run 3/30  Kp=0.00000 Ki=0.40906 J=0.6261
+GWO run 4/30  Kp=0.00014 Ki=0.41106 J=0.6477
+GWO run 5/30  Kp=0.00041 Ki=0.41170 J=0.6509
+GWO run 6/30  Kp=0.00002 Ki=0.41831 J=0.6269
+GWO run 7/30  Kp=0.00042 Ki=0.41003 J=0.6512
+GWO run 8/30  Kp=0.00000 Ki=0.43171 J=0.6307
+GWO run 9/30  Kp=0.00056 Ki=0.41142 J=0.6531
+GWO run 10/30  Kp=0.00000 Ki=0.42820 J=0.6292
+GWO run 11/30  Kp=0.00037 Ki=0.41496 J=0.6504
+GWO run 12/30  Kp=0.00002 Ki=0.41442 J=0.6264
+GWO run 13/30  Kp=0.00002 Ki=0.41778 J=0.6268
+GWO run 14/30  Kp=0.00000 Ki=0.41462 J=0.6264
+GWO run 15/30  Kp=0.00001 Ki=0.41205 J=0.6262
+GWO run 16/30  Kp=0.00004 Ki=0.42345 J=0.6279
+GWO run 17/30  Kp=0.00002 Ki=0.40268 J=0.6469
+GWO run 18/30  Kp=0.00000 Ki=0.40848 J=0.6262
+GWO run 19/30  Kp=0.00059 Ki=0.40910 J=0.6536
+GWO run 20/30  Kp=0.00000 Ki=0.41801 J=0.6267
+GWO run 21/30  Kp=0.00000 Ki=0.40833 J=0.6262
+GWO run 22/30  Kp=0.00059 Ki=0.41107 J=0.6536
+GWO run 23/30  Kp=0.00031 Ki=0.40750 J=0.6497
+GWO run 24/30  Kp=0.00003 Ki=0.40146 J=0.6477
+GWO run 25/30  Kp=0.00000 Ki=0.40889 J=0.6262
+GWO run 26/30  Kp=0.00057 Ki=0.41536 J=0.6533
+GWO run 27/30  Kp=0.00000 Ki=0.40902 J=0.6261
+GWO run 28/30  Kp=0.00000 Ki=0.40776 J=0.6458
+GWO run 29/30  Kp=0.00031 Ki=0.40630 J=0.6498
+GWO run 30/30  Kp=0.00025 Ki=0.41334 J=0.6490
+>> GWO: best 0.6261 | mean 0.6386 | std 0.0120 | worst 0.6536
+
+GA run 1/30  Kp=0.00000 Ki=0.41231 J=0.6262
+GA run 2/30  Kp=0.00205 Ki=0.40828 J=0.7149
+GA run 3/30  Kp=0.00130 Ki=0.40450 J=0.6696
+GA run 4/30  Kp=0.00000 Ki=0.41106 J=0.6262
+GA run 5/30  Kp=0.00000 Ki=0.40621 J=0.6460
+GA run 6/30  Kp=0.00000 Ki=0.40621 J=0.6460
+GA run 7/30  Kp=0.00021 Ki=0.50446 J=0.7322
+GA run 8/30  Kp=0.00327 Ki=0.36564 J=0.8103
+GA run 9/30  Kp=0.00007 Ki=0.40719 J=0.6469
+GA run 10/30  Kp=0.00009 Ki=0.37346 J=0.6953
+GA run 11/30  Kp=0.00014 Ki=0.41231 J=0.6477
+GA run 12/30  Kp=0.00003 Ki=0.41315 J=0.6462
+GA run 13/30  Kp=0.00009 Ki=0.40630 J=0.6472
+GA run 14/30  Kp=0.00024 Ki=0.40596 J=0.6492
+GA run 15/30  Kp=0.00000 Ki=0.40841 J=0.6261
+GA run 16/30  Kp=0.00113 Ki=0.40737 J=0.6652
+GA run 17/30  Kp=0.00008 Ki=0.40841 J=0.6471
+GA run 18/30  Kp=0.00000 Ki=0.40865 J=0.6261
+GA run 19/30  Kp=0.00054 Ki=0.39591 J=0.6618
+GA run 20/30  Kp=0.00010 Ki=0.41060 J=0.6471
+GA run 21/30  Kp=0.00065 Ki=0.41817 J=0.6550
+GA run 22/30  Kp=0.00009 Ki=0.40548 J=0.6473
+GA run 23/30  Kp=0.00000 Ki=0.40497 J=0.6462
+GA run 24/30  Kp=0.00000 Ki=0.40841 J=0.6261
+GA run 25/30  Kp=0.00000 Ki=0.41461 J=0.6264
+GA run 26/30  Kp=0.00000 Ki=0.40743 J=0.6458
+GA run 27/30  Kp=0.00000 Ki=0.40743 J=0.6458
+GA run 28/30  Kp=0.00000 Ki=0.40860 J=0.6261
+GA run 29/30  Kp=0.00024 Ki=0.40554 J=0.6492
+GA run 30/30  Kp=0.00009 Ki=0.34591 J=0.7605
+>> GA: best 0.6261 | mean 0.6602 | std 0.0426 | worst 0.8103
+
+--- Worst-case summary over all scenarios ---
+                     <strong>Kp</strong>          <strong>Ki</strong>       <strong>ITAEn_max</strong>    <strong>OS_max_pct</strong>    <strong>Ts_max_ms</strong>    <strong>PM_min_deg</strong>    <strong>GM_min_dB</strong>
+                  <strong>_________</strong>    <strong>_______</strong>    <strong>_________</strong>    <strong>__________</strong>    <strong>_________</strong>    <strong>__________</strong>    <strong>_________</strong>
+
+    <strong>Manual    </strong>       0.0132     0.6867    0.088699        18.68          400             0          -10  
+    <strong>Calculated</strong>        0.004     0.4045    0.059798      0.63317       288.79        33.661       4.9811  
+    <strong>PIDTuner  </strong>            0     0.8837    0.076626       15.207          400             0          -10  
+    <strong>PSO       </strong>            0    0.40855    0.055251       0.7577       254.25        67.531       5.8507  
+    <strong>GWO       </strong>            0    0.40902    0.055132       0.7598       253.95        67.504       5.8409  
+    <strong>GA        </strong>            0    0.40865    0.055226      0.75815       254.15        67.525       5.8486  
+    <strong>NSGA2_knee</strong>    0.0035677    0.30468     0.10378      0.35002       373.55        85.541       7.1103  
+
+--- Overshoot [%] per scenario ---
+               <strong>Manual</strong>     <strong>Calculated</strong>    <strong>PIDTuner</strong>      <strong>PSO</strong>         <strong>GWO</strong>         <strong>GA</strong>       <strong>NSGA2_knee</strong>
+               <strong>_______</strong>    <strong>__________</strong>    <strong>________</strong>    <strong>________</strong>    <strong>________</strong>    <strong>_______</strong>    <strong>__________</strong>
+
+    <strong>Nominal</strong>    0.53133     0.43796      0.63202       0.5243     0.52455    0.52435           0  
+    <strong>Vin-20%</strong>     1.1567     0.63317       13.239       0.7577      0.7598    0.75815     0.35002  
+    <strong>Vin+20%</strong>    0.63194     0.20281      0.43804      0.34853     0.34941    0.34872           0  
+    <strong>Load50%</strong>    0.98154     0.10677      0.38152      0.20961     0.21483    0.21184           0  
+    <strong>Load20%</strong>      18.68     0.07526       15.207     0.099782    0.097232    0.10687           0  
+    <strong>L-20%  </strong>    0.52893     0.41589      0.53973      0.51451     0.51485    0.51458           0  
+    <strong>C-20%  </strong>    0.66697     0.57382      0.80566      0.65983     0.66007    0.65988           0  
+
+--- Settling time [ms] per scenario ---
+               <strong>Manual</strong>    <strong>Calculated</strong>    <strong>PIDTuner</strong>     <strong>PSO</strong>       <strong>GWO</strong>        <strong>GA</strong>      <strong>NSGA2_knee</strong>
+               <strong>______</strong>    <strong>__________</strong>    <strong>________</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>__________</strong>
+
+    <strong>Nominal</strong>    186.38      269.88       95.683     239.15    238.88    239.08      361.18  
+    <strong>Vin-20%</strong>     169.3       241.8       391.26      203.9     203.6    203.76      328.69  
+    <strong>Vin+20%</strong>    189.45      280.45       109.05     254.25    253.95    254.15      373.55  
+    <strong>Load50%</strong>    221.48      271.67       113.16     244.19    243.98    243.98      358.48  
+    <strong>Load20%</strong>       400      288.79          400     248.48    248.55    248.48      363.88  
+    <strong>L-20%  </strong>    189.85      273.98       101.38     244.05    243.78    243.95      365.28  
+    <strong>C-20%  </strong>    190.88      274.38       96.655     242.58    242.28    242.48      367.38  
+
+[Warning: PIDTuner hit a search bound - widen bounds.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Main_Run_All', 'C:\Users\Razowan\Downloads\Research File With Program and paper\Booster Tunned Research prject by RK\PSO Program\Main_Run_All.m', 101)" style="font-weight:bold">Main_Run_All</a> (<a href="matlab: opentoline('C:\Users\Razowan\Downloads\Research File With Program and paper\Booster Tunned Research prject by RK\PSO Program\Main_Run_All.m',101,0)">line 101</a>)] 
+[Warning: PSO hit a search bound - widen bounds.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Main_Run_All', 'C:\Users\Razowan\Downloads\Research File With Program and paper\Booster Tunned Research prject by RK\PSO Program\Main_Run_All.m', 101)" style="font-weight:bold">Main_Run_All</a> (<a href="matlab: opentoline('C:\Users\Razowan\Downloads\Research File With Program and paper\Booster Tunned Research prject by RK\PSO Program\Main_Run_All.m',101,0)">line 101</a>)] 
+[Warning: GWO hit a search bound - widen bounds.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Main_Run_All', 'C:\Users\Razowan\Downloads\Research File With Program and paper\Booster Tunned Research prject by RK\PSO Program\Main_Run_All.m', 101)" style="font-weight:bold">Main_Run_All</a> (<a href="matlab: opentoline('C:\Users\Razowan\Downloads\Research File With Program and paper\Booster Tunned Research prject by RK\PSO Program\Main_Run_All.m',101,0)">line 101</a>)] 
+[Warning: GA hit a search bound - widen bounds.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Main_Run_All', 'C:\Users\Razowan\Downloads\Research File With Program and paper\Booster Tunned Research prject by RK\PSO Program\Main_Run_All.m', 101)" style="font-weight:bold">Main_Run_All</a> (<a href="matlab: opentoline('C:\Users\Razowan\Downloads\Research File With Program and paper\Booster Tunned Research prject by RK\PSO Program\Main_Run_All.m',101,0)">line 101</a>)] 
+diary off

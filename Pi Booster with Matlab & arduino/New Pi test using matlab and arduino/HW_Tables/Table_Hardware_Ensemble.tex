@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering\caption{Ensemble-averaged hardware metrics (worst over steps).}\label{tab:hwens}
+\begin{tabular}{lrrrrrr}
+\toprule
+Design & Kp & Ki & OS\_pct\_ens & Ts\_ms\_ens & Tr\_ms\_ens & SSerr\_pct\_ens \\
+\midrule
+Baseline (0.1, 20) & 0.1 & 20 & 6.291 & 780 & 72.1 & 2.831 \\
+Ref (0.05, 10) & 0.05 & 10 & 1.987 & 770 & 128.7 & 0.4977 \\
+PSO & 0.04737 & 104.7 & 7.155 & 770 & 9.961 & 1.016 \\
+GA & 0.06013 & 48.24 & 4.091 & 770 & 20 & 0.4378 \\
+GWO & 0.07289 & 75.37 & 3.408 & 580 & 11.05 & 0.8536 \\
+NSGA-II knee & 0 & 5.315 & 2.66 & 430 & 228.4 & 0.6124 \\
+\bottomrule
+\end{tabular}
+\end{table}

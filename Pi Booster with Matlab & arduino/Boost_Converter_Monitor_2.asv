@@ -1,0 +1,141 @@
+clear; clc; close all;
+
+%% 1. CONNECT
+s = serialport("COM10", 115200);
+configureTerminator(s, "LF");
+s.Timeout = 2;
+pause(2.5);          % wait for Arduino to restart
+flush(s);
+
+%% 2. ONE TEST: change these numbers and run this section again
+Kp     = 0.1;        % proportional gain
+Ki     = 40;         % integral gain
+Vlow   = 8;          % starting voltage (V)
+Vhigh  = 12;         % step target voltage (V)
+tLow   = 10;          % seconds to hold Vlow
+tHigh  = 15;          % seconds to hold Vhigh
+
+[T, m] = runStepTest(s, Kp, Ki, Vlow, Vhigh, tLow, tHigh);
+plotResult(T, m, Kp, Ki, Vhigh);
+disp(m)              % overshoot, rise time, settling time, error, cost
+% T (Time, Vref, Vout, Duty, PWM) and m are now in your Workspace.
+
+%% 3. AUTO-SEARCH FOR BEST Kp and Ki  (takes a few minutes)
+KpList = [0.05 0.1 0.2 0.5];
+KiList = [10 20 40 80];
+
+results = [];
+for kp = KpList
+    for ki = KiList
+        [Tt, mm] = runStepTest(s, kp, ki, Vlow, Vhigh, tLow, tHigh);
+        results = [results; kp, ki, mm.Overshoot, mm.RiseTime, ...
+                   mm.SettlingTime, mm.SteadyError, mm.Cost]; %#ok<AGROW>
+        fprintf("Kp=%.3f Ki=%.1f -> cost=%.3f overshoot=%.1f%%\n", ...
+                kp, ki, mm.Cost, mm.Overshoot);
+        pause(1);
+    end
+end
+
+results = array2table(results, "VariableNames", ...
+  ["Kp","Ki","Overshoot","RiseTime","SettlingTime","SteadyError","Cost"]);
+results = sortrows(results, "Cost");
+disp(results(1:5,:));                         % top 5 settings
+bestKp = results.Kp(1);  bestKi = results.Ki(1);
+fprintf("BEST: Kp = %.3f, Ki = %.1f\n", bestKp, bestKi);
+
+% Run the best one and look at it
+[T, m] = runStepTest(s, bestKp, bestKi, Vlow, Vhigh, tLow, tHigh);
+plotResult(T, m, bestKp, bestKi, Vhigh);
+
+%% 4. FINISH
+sendCmd(s, "VREF=5");
+clear s;
+
+%% ================= FUNCTIONS (keep at the bottom) =================
+function sendCmd(s, cmd)
+    flush(s);
+    writeline(s, cmd);
+    t0 = tic;
+    while toc(t0) < 1
+        line = readline(s);
+        if isempty(line) || ismissing(line), continue; end
+        line = strtrim(line);
+        if startsWith(line, "ACK"), return; end
+        if startsWith(line, "ERROR"), warning("Arduino: " + line); return; end
+    end
+    warning("No reply to " + cmd);
+end
+
+function [T, m] = runStepTest(s, Kp, Ki, Vlow, Vhigh, tLow, tHigh)
+    sendCmd(s, "RESET");
+    sendCmd(s, sprintf("KP=%.4f", Kp));
+    sendCmd(s, sprintf("KI=%.4f", Ki));
+    sendCmd(s, sprintf("VREF=%.2f", Vlow));
+    flush(s);
+
+    raw = []; stepSent = false; unsafe = false;
+    t0 = tic;
+    while toc(t0) < tLow + tHigh
+        if ~stepSent && toc(t0) >= tLow
+            writeline(s, sprintf("VREF=%.2f", Vhigh));
+            stepSent = true;
+        end
+        line = readline(s);
+        if isempty(line) || ismissing(line), continue; end
+        p = split(strtrim(line), ",");
+        if numel(p) ~= 6 || p(1) ~= "DATA", continue; end
+        v = str2double(p(2:6))';
+        if any(isnan(v)), continue; end
+        raw = [raw; v]; %#ok<AGROW>
+        if v(3) > 20            % safety: output too high
+            unsafe = true; break;
+        end
+    end
+    if unsafe
+        writeline(s, "VREF=5"); writeline(s, "RESET");
+        warning("Output went above 20 V - test aborted.");
+    end
+
+    Time = (raw(:,1) - raw(1,1)) / 1000;
+    T = table(Time, raw(:,2), raw(:,3), raw(:,4), raw(:,5), ...
+        'VariableNames', ["Time","Vref","Vout","Duty","PWM"]);
+
+    % ---------- performance numbers ----------
+    iStep = find(T.Vref >= Vhigh - 0.01, 1);
+    if isempty(iStep) || unsafe
+        m = struct("Overshoot",NaN,"RiseTime",NaN,"SettlingTime",NaN, ...
+                   "SteadyError",NaN,"Cost",Inf);
+        return;
+    end
+    t = T.Time(iStep:end) - T.Time(iStep);
+    y = T.Vout(iStep:end);
+    span = Vhigh - Vlow;
+
+    overshoot = max(0, (max(y) - Vhigh) / span * 100);
+
+    i10 = find(y >= Vlow + 0.1*span, 1);
+    i90 = find(y >= Vlow + 0.9*span, 1);
+    if isempty(i10) || isempty(i90), riseT = NaN; else, riseT = t(i90) - t(i10); end
+
+    outside = find(abs(y - Vhigh) > 0.02*Vhigh, 1, "last");   % 2% band
+    if isempty(outside), settleT = 0; else, settleT = t(outside); end
+
+    ssErr = abs(mean(y(round(0.8*end):end)) - Vhigh);
+    iae = trapz(t, abs(y - Vhigh));                           % total error area
+    cost = iae + 0.05*overshoot + 5*ssErr;                    % smaller = better
+
+    m = struct("Overshoot",overshoot,"RiseTime",riseT,"SettlingTime",settleT, ...
+               "SteadyError",ssErr,"Cost",cost);
+end
+
+function plotResult(T, m, Kp, Ki, Vhigh)
+    figure("Name","Step response");
+    subplot(2,1,1);
+    plot(T.Time, T.Vref, "--", T.Time, T.Vout, "LineWidth", 1.5); grid on;
+    legend("Vref","Vout"); ylabel("Voltage (V)");
+    title(sprintf("Kp=%.3f  Ki=%.1f  Overshoot=%.1f%%  Settling=%.2fs  Cost=%.2f", ...
+          Kp, Ki, m.Overshoot, m.SettlingTime, m.Cost));
+    subplot(2,1,2);
+    plot(T.Time, T.Duty, "LineWidth", 1.5); grid on;
+    xlabel("Time (s)"); ylabel("Duty (%)");
+end

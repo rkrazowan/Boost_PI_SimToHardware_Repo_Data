@@ -1,0 +1,118 @@
+Serial ports found: 
+MOCK MODE: emulated circuit, no hardware used.
+Baseline Kp=0.1, Ki=20: J = 0.591 | trip = 0 | one trial = 0.9 s
+   per-step [IAE_n OS% Ts Tr chatter]:
+    0.0237    2.5904    0.0400    0.0462    0.1970
+    0.0207    1.2708    0.0450    0.0539    0.1085
+    0.0196    2.0039    0.0450    0.0390    0.1928
+    0.0172    0.6354    0.0600    0.0456    0.1085
+    0.0181    0.9612    0.0550    0.0415    0.1359
+    0.0171    0.8635    0.0750    0.0454    0.1706
+
+PLAN: pop = 6, iterations = 9, runs = 1 per algorithm | expected ~ 4 min optimisation + 0 min confirmation
+PSO           run 1/1 | J = 0.302 | Kp = 0.0115 | Ki = 205.91 | trials 59, trips 0 | elapsed 0.3 min
+GA            run 1/1 | J = 0.302 | Kp = 0.0455 | Ki = 181.07 | trials 104, trips 0 | elapsed 0.5 min
+GWO           run 1/1 | J = 0.308 | Kp = 0.0212 | Ki = 196.73 | trials 153, trips 0 | elapsed 0.7 min
+NSGA-II knee  run 1/1 | J = 0.311 | Kp = 0.0368 | Ki = 193.03 | trials 199, trips 0 | elapsed 0.9 min
+Confirm rep 1/2 | NSGA-II knee (HW)          Kp=0.0368 Ki=193.03 | elapsed 0.9 min
+Confirm rep 1/2 | PSO (sim)                  Kp=0.0550 Ki=247.65 | elapsed 0.9 min
+Confirm rep 1/2 | pidtune wc=100             Kp=0.0000 Ki=18.97 | elapsed 0.9 min
+Confirm rep 1/2 | PSO (HW)                   Kp=0.0115 Ki=205.91 | elapsed 0.9 min
+Confirm rep 1/2 | Auto (app)                 Kp=0.0000 Ki=299.48 | elapsed 0.9 min
+Confirm rep 1/2 | GA (HW)                    Kp=0.0455 Ki=181.07 | elapsed 0.9 min
+Confirm rep 1/2 | Baseline (Kp=0.1, Ki=20)   Kp=0.1000 Ki=20.00 | elapsed 0.9 min
+Confirm rep 1/2 | pidtune wc=150             Kp=0.0000 Ki=28.45 | elapsed 0.9 min
+Confirm rep 1/2 | pidtune wc=300             Kp=0.0000 Ki=56.81 | elapsed 1.0 min
+Confirm rep 1/2 | GA (sim)                   Kp=0.0396 Ki=227.47 | elapsed 1.0 min
+Confirm rep 1/2 | GWO (sim)                  Kp=0.0448 Ki=236.80 | elapsed 1.0 min
+Confirm rep 1/2 | GWO (HW)                   Kp=0.0212 Ki=196.73 | elapsed 1.0 min
+Confirm rep 1/2 | NSGA-II knee (sim)         Kp=0.0407 Ki=231.52 | elapsed 1.0 min
+Confirm rep 1/2 | Slider (app)               Kp=0.0151 Ki=95.43 | elapsed 1.0 min
+Confirm rep 2/2 | Baseline (Kp=0.1, Ki=20)   Kp=0.1000 Ki=20.00 | elapsed 1.0 min
+Confirm rep 2/2 | NSGA-II knee (HW)          Kp=0.0368 Ki=193.03 | elapsed 1.0 min
+Confirm rep 2/2 | GA (HW)                    Kp=0.0455 Ki=181.07 | elapsed 1.0 min
+Confirm rep 2/2 | PSO (sim)                  Kp=0.0550 Ki=247.65 | elapsed 1.0 min
+Confirm rep 2/2 | Auto (app)                 Kp=0.0000 Ki=299.48 | elapsed 1.0 min
+Confirm rep 2/2 | pidtune wc=100             Kp=0.0000 Ki=18.97 | elapsed 1.0 min
+Confirm rep 2/2 | GWO (sim)                  Kp=0.0448 Ki=236.80 | elapsed 1.0 min
+Confirm rep 2/2 | GA (sim)                   Kp=0.0396 Ki=227.47 | elapsed 1.0 min
+Confirm rep 2/2 | NSGA-II knee (sim)         Kp=0.0407 Ki=231.52 | elapsed 1.0 min
+Confirm rep 2/2 | pidtune wc=300             Kp=0.0000 Ki=56.81 | elapsed 1.0 min
+Confirm rep 2/2 | GWO (HW)                   Kp=0.0212 Ki=196.73 | elapsed 1.0 min
+Confirm rep 2/2 | PSO (HW)                   Kp=0.0115 Ki=205.91 | elapsed 1.0 min
+Confirm rep 2/2 | Slider (app)               Kp=0.0151 Ki=95.43 | elapsed 1.0 min
+Confirm rep 2/2 | pidtune wc=150             Kp=0.0000 Ki=28.45 | elapsed 1.0 min
+
+--- Optimiser statistics on hardware (1 runs) ---
+      <strong>Algorithm</strong>       <strong>J_best</strong>     <strong>J_median</strong>    <strong>J_mean</strong>     <strong>J_std</strong>    <strong>J_worst</strong>    <strong>Kp_best</strong>    <strong>Ki_best</strong>
+    <strong>______________</strong>    <strong>_______</strong>    <strong>________</strong>    <strong>_______</strong>    <strong>_____</strong>    <strong>_______</strong>    <strong>_______</strong>    <strong>_______</strong>
+
+    "PSO"             0.30207    0.30207     0.30207      0      0.30207    0.0115     205.91 
+    "GA"                0.302      0.302       0.302      0        0.302    0.0455     181.07 
+    "GWO"             0.30755    0.30755     0.30755      0      0.30755    0.0212     196.73 
+    "NSGA-II knee"    0.31057    0.31057     0.31057      0      0.31057    0.0368     193.03 
+
+
+--- Hardware confirmation (2 repeated measurements per design; worst of 6 steps) ---
+              <strong>Design</strong>              <strong>Group</strong>    <strong>Kp_hw</strong>     <strong>Ki_hw</strong>     <strong>Kp_simEq</strong>     <strong>Ki_simEq</strong>    <strong>OS_mean_pct</strong>     <strong>OS_std</strong>     <strong>Ts_mean_ms</strong>      <strong>Ts_std</strong>      <strong>Tr_mean_ms</strong>     <strong>Tr_std</strong>      <strong>Chatter_pct</strong>    <strong>J_mean</strong>       <strong>J_std</strong>      <strong>Trips</strong>
+    <strong>__________________________</strong>    <strong>_____</strong>    <strong>______</strong>    <strong>______</strong>    <strong>_________</strong>    <strong>________</strong>    <strong>___________</strong>    <strong>________</strong>    <strong>__________</strong>    <strong>__________</strong>    <strong>__________</strong>    <strong>_________</strong>    <strong>___________</strong>    <strong>_______</strong>    <strong>_________</strong>    <strong>_____</strong>
+
+    "Baseline (Kp=0.1, Ki=20)"      1         0.1        20     0.016047     3.2094       2.5904              0       77.5           3.5355      47.144          1.154      0.19696      0.59708     0.014142      0  
+    "pidtune wc=100"                1           0    18.971            0     3.0443       2.5904              0       72.5           3.5355      49.253        0.52797      0.19813      0.59401     0.018071      0  
+    "pidtune wc=150"                1           0    28.449            0     4.5652       2.5904              0         45                0      31.757        0.65525      0.19754      0.48586    0.0046119      0  
+    "pidtune wc=300"                1           0    56.811            0     9.1165       2.5904              0         20       3.1403e-13      14.813              0      0.19842      0.37888    0.0013629      0  
+    "Slider (app)"                  1      0.0151    95.432    0.0024231     15.314       4.1219        0.57601         25                0      9.0549        0.21329      0.19396      0.46789     0.039007      0  
+    "Auto (app)"                    1           0    299.48            0     48.057       2.5904              0         10                0      8.9829       0.097308      0.23492      0.31704    0.0066159      0  
+    "PSO (sim)"                     2       0.055    247.65    0.0088259     39.741       3.7634         1.6589         10                0         9.1       0.027222        0.267      0.38222     0.084302      0  
+    "GA (sim)"                      2      0.0396    227.47    0.0063546     36.503       3.7634       0.069121         10                0      9.0574       0.033042      0.21205      0.36583     0.025812      0  
+    "GWO (sim)"                     2      0.0448     236.8    0.0071891     37.999       2.5904              0         10                0      8.9785         0.0911      0.23533      0.31173     0.001984      0  
+    "NSGA-II knee (sim)"            2      0.0407    231.52    0.0065312     37.152       2.5904              0         10                0       9.193       0.005211      0.24676      0.31977    0.0052464      0  
+    "PSO (HW)"                      3      0.0115    205.91    0.0018454     33.042       3.1525        0.79489         10                0      9.1125       0.021116        0.194      0.33187      0.03476      0  
+    "GA (HW)"                       3      0.0455    181.07    0.0073014     29.057       4.3011              0         10                0       9.132       0.048649      0.19576      0.40655    0.0034406      0  
+    "GWO (HW)"                      3      0.0212    196.73     0.003402     31.569       3.4457         1.2096         10                0      9.0898       0.041636      0.19754      0.35874     0.068409      0  
+    "NSGA-II knee (HW)"             3      0.0368    193.03    0.0059053     30.976       3.7512         1.6416         10                0      8.9455      0.0069365      0.19666      0.37137     0.082273      0  
+
+--- Medium step 12 V <-> 16 V (up = rise, down = fall) ---
+              <strong>Design</strong>              <strong>OS_up_pct</strong>    <strong>Rise_ms</strong>    <strong>Ts_up_ms</strong>    <strong>Undershoot_down_pct</strong>    <strong>Fall_ms</strong>    <strong>Ts_down_ms</strong>
+    <strong>__________________________</strong>    <strong>_________</strong>    <strong>_______</strong>    <strong>________</strong>    <strong>___________________</strong>    <strong>_______</strong>    <strong>__________</strong>
+
+    "Baseline (Kp=0.1, Ki=20)"      1.393      38.903         45            0.94086           44.15          65   
+    "pidtune wc=100"               2.0039      35.798         40            0.94086           39.66        57.5   
+    "pidtune wc=150"               2.0039      23.638       27.5            0.63539          27.291          35   
+    "pidtune wc=300"               1.6984      11.728         15            0.94086           13.15          20   
+    "Slider (app)"                 2.0039      7.2874         10             1.5518          7.6108          10   
+    "Auto (app)"                   1.6984      4.0746          5             1.5518          7.6165          10   
+    "PSO (sim)"                    2.0039      4.4444          5             1.8573          7.6882          10   
+    "GA (sim)"                     1.6984      4.1549          5             1.5518          7.6995          10   
+    "GWO (sim)"                    1.6984      4.0816          5             2.1628          7.5722          10   
+    "NSGA-II knee (sim)"           2.0039      4.1241          5             1.8573          7.8407          10   
+    "PSO (HW)"                     2.0039      4.1498          5             2.1628          7.5996          10   
+    "GA (HW)"                      2.0039      4.2689          5             4.3011          7.3991          10   
+    "GWO (HW)"                     2.0039      4.0935          5             3.0792           7.457          10   
+    "NSGA-II knee (HW)"            2.0039       4.147          5             3.3847          7.5451          10   
+
+
+--- Final ranking on hardware (rank-sum p-values from repeated measurements) ---
+    <strong>Rank</strong>              <strong>Design</strong>              <strong>Kp_hw</strong>     <strong>Ki_hw</strong>     <strong>J_mean</strong>       <strong>J_std</strong>      <strong>p_vs_baseline</strong>    <strong>p_vs_best</strong>
+    <strong>____</strong>    <strong>__________________________</strong>    <strong>______</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>_________</strong>    <strong>_____________</strong>    <strong>_________</strong>
+
+      1     "GWO (sim)"                   0.0448     236.8    0.31173     0.001984       0.12134              1 
+      2     "Auto (app)"                       0    299.48    0.31704    0.0066159       0.12134        0.43858 
+      3     "NSGA-II knee (sim)"          0.0407    231.52    0.31977    0.0052464       0.12134        0.12134 
+      4     "PSO (HW)"                    0.0115    205.91    0.33187      0.03476       0.12134              1 
+      5     "GWO (HW)"                    0.0212    196.73    0.35874     0.068409       0.12134        0.43858 
+      6     "GA (sim)"                    0.0396    227.47    0.36583     0.025812       0.12134        0.12134 
+      7     "NSGA-II knee (HW)"           0.0368    193.03    0.37137     0.082273       0.12134        0.12134 
+      8     "pidtune wc=300"                   0    56.811    0.37888    0.0013629       0.12134        0.12134 
+      9     "PSO (sim)"                    0.055    247.65    0.38222     0.084302       0.12134        0.12134 
+     10     "GA (HW)"                     0.0455    181.07    0.40655    0.0034406       0.12134        0.12134 
+     11     "Slider (app)"                0.0151    95.432    0.46789     0.039007       0.12134        0.12134 
+     12     "pidtune wc=150"                   0    28.449    0.48586    0.0046119       0.12134        0.12134 
+     13     "pidtune wc=100"                   0    18.971    0.59401     0.018071       0.43858        0.12134 
+     14     "Baseline (Kp=0.1, Ki=20)"       0.1        20    0.59708     0.014142             1        0.12134 
+
+>>> BEST ON HARDWARE: GWO (sim)  ->  KP = 0.0448,  KI = 236.797  (sketch units; sim-equivalent Kp = 0.00719, Ki = 37.999)
+[Warning: Vectorized content might take a long time to create, or it might contain unexpected results. Set 'ContentType' to 'image'
+for better performance. <a href="matlab:warning('off', 'MATLAB:print:ContentTypeImageSuggested')">Click here</a> to not see this message again.] 
+
+Total time: 2.1 min. Trips: 0. Figures: Paper_Figures_HW/, tables: Paper_Tables_HW/

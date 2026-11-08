@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering\caption{Hardware validation of all designs (worst over steps, mean of single repeats).}\label{tab:hwval}
+\begin{tabular}{lrrrrrrrrrrrr}
+\toprule
+Design & Kp & Ki & WorstOS\_pct & OS\_sd & WorstTs\_ms & Ts\_sd & WorstTr\_ms & WorstSSerr\_pct & Ripple\_pct & DutyStd\_pct & J\_mean & J\_sd \\
+\midrule
+Baseline (0.1, 20) & 0.1 & 20 & 6.892 & 0.3301 & 743.3 & 26.27 & 72.04 & 2.825 & 1.64 & 0.2027 & 2.873 & 0.3037 \\
+Ref (0.05, 10) & 0.05 & 10 & 4.426 & 1.222 & 726.3 & 35.12 & 130 & 1.125 & 3.13 & 0.197 & 1.886 & 0.06259 \\
+PSO & 0.04737 & 104.7 & 8.52 & 5.622 & 278.3 & 428.4 & 16.24 & 1.488 & 1.989 & 0.2856 & 1.251 & 0.4389 \\
+GA & 0.06013 & 48.24 & 5.108 & 1.446 & 284.3 & 414.6 & 22.84 & 1.019 & 2.042 & 0.201 & 0.883 & 0.5494 \\
+GWO & 0.07289 & 75.37 & 6.706 & 1.37 & 702.7 & 86.95 & 17.08 & 1.079 & 2.227 & 0.2474 & 1.712 & 0.3193 \\
+NSGA-II knee & 0 & 5.315 & 4.809 & 1.528 & 472 & 62.45 & 224.7 & 0.8558 & 2.297 & 0.2084 & 1.537 & 0.1204 \\
+\bottomrule
+\end{tabular}
+\end{table}

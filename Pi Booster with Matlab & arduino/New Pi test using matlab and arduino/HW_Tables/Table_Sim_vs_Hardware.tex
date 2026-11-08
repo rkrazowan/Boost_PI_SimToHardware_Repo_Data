@@ -1,0 +1,13 @@
+\begin{table}[t]
+\centering\caption{Simulation-optimised controllers: predicted versus measured performance.}\label{tab:simhw}
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+Design & Kp\_sim & Ki\_sim & Kp\_hw & Ki\_hw & SimOS\_pct & SimTs\_ms & HwOS\_pct & HwTs\_ms & HwJ \\
+\midrule
+Sim-GWO & 0.01614 & 44.96 & 0.1006 & 280.2 & 14.22 & 38.8 & 20.92 & 970 & 3.991 \\
+Sim-NSGA-II & 0.01963 & 46.36 & 0.1224 & 288.9 & 17.19 & 30.16 & 6.509 & 915 & 2.072 \\
+Sim pidtune wc300 & 0 & 9.117 & 0 & 56.81 & 15.6 & 90.32 & 3.904 & 980 & 2.229 \\
+Sim Slider & 0.00243 & 15.31 & 0.01514 & 95.43 & 14.25 & 70.54 & 6.11 & 805 & 1.547 \\
+\bottomrule
+\end{tabular}
+\end{table}

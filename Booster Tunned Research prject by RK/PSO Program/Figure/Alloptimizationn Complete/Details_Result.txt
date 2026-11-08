@@ -1,0 +1,56 @@
+>> itPSO = arrayfun(@(r) find(R.PSO.H(r,:) <= R.PSO.H(r,end)*1.001,1), 1:size(R.PSO.H,1));
+itGWO = arrayfun(@(r) find(R.GWO.H(r,:) <= R.GWO.H(r,end)*1.001,1), 1:size(R.GWO.H,1));
+mean(itPSO), mean(itGWO)
+
+ans =
+
+    8.6333
+
+
+ans =
+
+    7.9333
+
+>> //////////////////// for the test case kp=.001 at 30 size itteration 
+>> load('results_B_Kp001.mat');
+J1 = R.PSO.J; J2 = R.GWO.J; J3 = R.GA.J;
+p_PSO_GWO = ranksum(J1,J2)
+p_PSO_GA  = ranksum(J1,J3)
+p_GWO_GA  = ranksum(J2,J3)
+Jbest = min([J1;J2;J3]);
+success = [mean(J1<=Jbest*1.001) mean(J2<=Jbest*1.001) mean(J3<=Jbest*1.001)]
+figure; boxplot([J1 J2 J3],'Labels',{'PSO','GWO','GA'}); ylabel('Final cost'); grid on
+
+p_PSO_GWO =
+
+   8.2919e-06
+
+
+p_PSO_GA =
+
+   3.0199e-11
+
+
+p_GWO_GA =
+
+   6.6955e-11
+
+
+success =
+
+    1.0000    0.8667    0.0333
+
+>> itPSO = arrayfun(@(r) find(R.PSO.H(r,:) <= R.PSO.H(r,end)*1.001,1), 1:size(R.PSO.H,1));
+itGWO = arrayfun(@(r) find(R.GWO.H(r,:) <= R.GWO.H(r,end)*1.001,1), 1:size(R.GWO.H,1));
+mean(itPSO), mean(itGWO)
+
+ans =
+
+    7.5000
+
+
+ans =
+
+    8.2333
+
+>> 

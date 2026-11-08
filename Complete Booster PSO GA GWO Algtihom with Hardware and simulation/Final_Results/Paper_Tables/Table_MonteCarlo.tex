@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering\caption{Monte Carlo robustness on held-out random scenarios.}\label{tab:mc}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Design & Unstable\_pct & SpecMet\_pct & OS\_mean\_pct & OS\_p95\_pct & OS\_max\_pct & Ts\_p95\_ms & PM\_min\_deg \\
+\midrule
+pidtune wc=100 & 0 & 0 & 0 & 0 & 0 & 45.89 & 87.99 \\
+pidtune wc=150 & 0 & 0 & 0 & 0 & 0 & 30.46 & 86.98 \\
+pidtune wc=300 & 0 & 100 & 1.91e-15 & 0 & 8.882e-14 & 15.23 & 83.95 \\
+Auto (app) & 0 & 83.6 & 3.97 & 17.99 & 25.56 & 4.018 & 47.84 \\
+Slider (app) & 0 & 100 & 4.663e-15 & 4.441e-14 & 8.882e-14 & 9.419 & 85.35 \\
+PSO & 0 & 100 & 5.151e-15 & 2.22e-14 & 4.441e-14 & 4.008 & 69.69 \\
+GA & 0 & 100 & 6.217e-15 & 4.441e-14 & 6.661e-14 & 4.008 & 69.69 \\
+GWO & 0 & 100 & 9.992e-15 & 4.441e-14 & 2.22e-12 & 4.008 & 70.03 \\
+NSGA-II knee & 0 & 100 & 6.128e-15 & 4.441e-14 & 6.661e-14 & 4.008 & 58.74 \\
+\bottomrule
+\end{tabular}
+\end{table}

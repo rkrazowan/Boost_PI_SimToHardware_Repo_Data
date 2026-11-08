@@ -1,0 +1,6 @@
+1. https://www.youtube.com/watch?v=SwabXHR0HWg&t=187s ----- video for the pid tunning with inbuild pid tunner app
+2. https://www.youtube.com/watch?v=twwq0QPiRi4      --------Similar video discussed about the pid tunning of booster using pid app in matlab
+3. https://www.youtube.com/watch?v=J4vQe11QlaY&t=27s -- this video with inform you to find the transfer funciton model for booster 
+4. https://www.youtube.com/watch?v=8EbjiEtFvHQ ------ this is best video for the pid booster using the transfer funciton based 
+5. https://www.youtube.com/watch?v=1DFJ3uQfF1g -------This video for an buck converter with pid tunner using app without transfer function
+6. https://www.youtube.com/watch?v=0-Rutc3DOz4&t=1268s ---- Its pso based pid tunning model with details

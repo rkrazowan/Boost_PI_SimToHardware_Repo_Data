@@ -1,0 +1,53 @@
+function cfg = Boost_Config()
+% All settings in ONE place (report these in the paper for reproducibility)
+
+%% Converter (same equations as your original code)
+P = 6.61; Vin = 10; Vout = 18.18; fs = 62.5e3;
+Iout = P/Vout;
+cfg.Vin = Vin;  cfg.Vout = Vout;  cfg.fs = fs;
+cfg.L = 22.5e-6;
+cfg.C = 470e-6;
+cfg.R = 50;
+
+%% Simulink
+cfg.model   = 'PSO_PI_Controlled_Booster';
+cfg.Tstop   = 0.4;        % [s] set by code; keep >= 1.5x baseline settling time
+cfg.simMode = 'normal';   % try 'accelerator' after everything works
+
+%% Operating scenarios: [Vin_mult  R_mult  L_mult  C_mult]
+% R_mult = 2 -> 50 % load, 5 -> 20 % load
+cfg.scenNames = {'Nominal','Vin-20%','Vin+20%','Load50%','Load20%','L-20%','C-20%'};
+cfg.S = [1 1 1 1;
+         0.8 1 1 1;
+         1.2 1 1 1;
+         1 2 1 1;
+         1 5 1 1;
+         1 1 0.8 1;
+         1 1 1 0.8];
+cfg.ws = ones(size(cfg.S,1),1);  cfg.ws(1) = 2;   % nominal weighted double
+cfg.Sopt = [1 2 5];   % scenarios used INSIDE the optimiser (nominal first!)
+cfg.fast    = false;  % internal flag (Main sets it)
+cfg.useFast = true;   % true: optimise on averaged model, validate on Simulink
+
+%% Cost weights: [ITAE_norm  Overshoot(pu)  Ts_norm  DutyEffort]
+% CALIBRATE: print metrics for your baseline gains, then scale so that
+% each term contributes a similar amount.
+cfg.w  = [10 5 0.5 0.2];
+
+cfg.lambda = 0.5;   % J = (1-lambda)*weighted mean + lambda*worst case
+cfg.PMmin  = 45;    % deg  (phase-margin penalty threshold)
+cfg.GMmin  = 6;     % dB   (gain-margin penalty threshold)
+cfg.wm = 0.5;   % margin penalty weight
+
+%% Optimizer settings
+cfg.lb = [0.001 0.1];   cfg.ub = [0.03 2];   % [Kp Ki] bounds
+cfg.nP = 12;  cfg.maxIter = 20;
+cfg.c1 = 1.5; cfg.c2 = 1.5;                  % PSO (w decays 0.9 -> 0.4)
+cfg.stall = 8;                               % PSO stopping: no gain for 8 iters
+cfg.nRuns = 1;    % useFast=true: 30 is cheap. useFast=false: use 10 or fewer this wis teh runin configuratino of the simulink
+
+%% Baseline gains (fill in your three-way comparison; NaN = skip)
+cfg.base = struct('Manual',     [0.0132 20], ...
+                  'Calculated', [0 24], ...
+                  'PIDTuner',   [0 5.24]);
+end
